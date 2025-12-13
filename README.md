@@ -4,7 +4,6 @@
 ![GitHub Downloads](https://img.shields.io/github/downloads/saintsHr/Fireset/total)
 ![GitHub License](https://img.shields.io/github/license/saintsHr/Fireset)
 ![GitHub Release](https://img.shields.io/github/v/release/saintsHr/Fireset)
-![Testspace pass ratio](https://img.shields.io/testspace/pass-ratio/saintsHr/saintsHr%3AFireset/main)
 
 ![placeholder](logo.png)
 

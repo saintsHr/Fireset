@@ -1,49 +1,84 @@
 # ====================================================
-# Variables
+# Project
 # ====================================================
-SRC := $(shell find src -name "*.c")
-OBJ := $(patsubst src/%.c,build/%.o,$(SRC))
-DEP := $(OBJ:.o=.d)
+TARGET := fireset
 
+# ====================================================
+# Tools
+# ====================================================
 CC := gcc
 AR := ar
 RM := rm -rf
 
+# ====================================================
+# Sources
+# ====================================================
+SRC := $(shell find src -name "*.c")
+
+# ====================================================
+# Build dirs (default = debug)
+# ====================================================
+BUILD_DIR := build/debug
+
+# ====================================================
+# Objects
+# ====================================================
+OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(SRC))
+DEP := $(OBJ:.o=.d)
+
+# ====================================================
+# Flags
+# ====================================================
 DEPFLAGS := -MMD -MP
-CFLAGS := -Iinclude -Wall -Wextra $(DEPFLAGS)
-RELEASEFLAGS := -O3 -Iinclude $(DEPFLAGS)
-LDFLAGS := 
 
-TARGET := engine
+CFLAGS := -g -O0 -Wall -Wextra -Iinclude $(DEPFLAGS)
+LDFLAGS :=
 
 # ====================================================
-# Main Rules
+# Outputs (same names)
 # ====================================================
-.PHONY: all release clean
+BIN := bin/$(TARGET)
+LIB := lib/lib$(TARGET).a
 
-all: bin/$(TARGET)
+# ====================================================
+# Phony
+# ====================================================
+.PHONY: all debug release clean
 
-release: CFLAGS := $(RELEASEFLAGS)
-release: bin/$(TARGET)
-	mkdir -p lib
-	ar rcs lib/lib$(TARGET).a $(OBJ)
+# ====================================================
+# High-level targets
+# ====================================================
+all: debug
+
+debug: $(BIN) $(LIB)
+
+release: BUILD_DIR := build/release
+release: CFLAGS := -O3 -Wall -Wextra -Iinclude $(DEPFLAGS)
+release: $(BIN) $(LIB)
 
 # ====================================================
 # Executable
 # ====================================================
-bin/$(TARGET): $(OBJ)
-	mkdir -p bin
-	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDFLAGS)
+$(BIN): $(OBJ)
+	@mkdir -p bin
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 # ====================================================
-# Object Compiling
+# Static library
 # ====================================================
-build/%.o: src/%.c
+$(LIB): $(OBJ)
+	@mkdir -p lib
+	$(AR) rcs $@ $^
+
+# ====================================================
+# Object compilation
+# ====================================================
+$(BUILD_DIR)/%.o: src/%.c
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # ====================================================
-# Automatic Dependencies
+# Dependencies
 # ====================================================
 -include $(DEP)
 

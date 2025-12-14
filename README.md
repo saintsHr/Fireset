@@ -5,7 +5,7 @@
 ![GitHub License](https://img.shields.io/github/license/saintsHr/Fireset)
 ![GitHub Release](https://img.shields.io/github/v/release/saintsHr/Fireset)
 
-![placeholder](logo.png)
+![placeholder](assets/logo.png)
 
 ---
 

@@ -14,6 +14,7 @@ RM := rm -rf
 # Sources
 # ====================================================
 SRC := $(shell find src -name "*.c")
+LIB_SRC := $(filter-out src/main.c,$(SRC))  # <-- remove main.c da lib
 
 # ====================================================
 # Build dirs (default = debug)
@@ -24,6 +25,7 @@ BUILD_DIR := build/debug
 # Objects
 # ====================================================
 OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(SRC))
+LIB_OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(LIB_SRC))  # <-- objetos da lib
 DEP := $(OBJ:.o=.d)
 
 # ====================================================
@@ -64,9 +66,9 @@ $(BIN): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 # ====================================================
-# Static library
+# Static library (sem main.c)
 # ====================================================
-$(LIB): $(OBJ)
+$(LIB): $(LIB_OBJ)
 	@mkdir -p lib
 	$(AR) rcs $@ $^
 

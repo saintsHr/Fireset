@@ -11,18 +11,18 @@ int main(void){
     window.name = "Example Game";
     fsCreateWindow(&window);
 
-    // tringle vertices
-    FsVec2f vertices[3] = {
+    FsVec2f vertices[4] = {
         {-0.5f, -0.5f },
         { 0.5f, -0.5f },
-        { 0.0f,  0.5f }
+        { 0.5f,  0.5f },
+        {-0.5f,  0.5f }
     };
 
     // main loop
     while (!fsWindowShouldClose(window)){
         fsClear(0, 0, 0);
 
-        fsDrawTriangle(vertices);
+        fsDrawQuad(vertices);
 
         fsHandleWindow(&window);
     }

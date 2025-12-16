@@ -54,6 +54,9 @@ all: debug
 
 debug: $(BIN) $(LIB)
 
+doc:
+	doxygen Doxyfile
+
 release: BUILD_DIR := build/release
 release: CFLAGS := -O3 -Wall -Wextra -Iinclude $(DEPFLAGS)
 release: $(BIN) $(LIB)

@@ -96,7 +96,9 @@ $(function(){initNavTree('group__Core.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga1be1078b8aae25531a2e8425439d3674" id="r_ga1be1078b8aae25531a2e8425439d3674"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1be1078b8aae25531a2e8425439d3674">fsInit</a> ()</td></tr>
+<tr class="memdesc:ga1be1078b8aae25531a2e8425439d3674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine, should be called on the very start of the program, before using the engine.  <br /></td></tr>
 <tr class="memitem:gafc21c59ed671c34d454856f0eaf61c87" id="r_gafc21c59ed671c34d454856f0eaf61c87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafc21c59ed671c34d454856f0eaf61c87">fsExit</a> ()</td></tr>
+<tr class="memdesc:gafc21c59ed671c34d454856f0eaf61c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdowns the engine, should be called on the end of the program, after using the engines.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -115,6 +117,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Shutdowns the engine, should be called on the end of the program, after using the engines. </p>
+
 </div>
 </div>
 <a id="ga1be1078b8aae25531a2e8425439d3674" name="ga1be1078b8aae25531a2e8425439d3674"></a>
@@ -131,6 +135,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the engine, should be called on the very start of the program, before using the engine. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>- success, engine initialized </td></tr>
+    <tr><td class="paramname">false</td><td>- failed, engine not initialized </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

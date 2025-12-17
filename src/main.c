@@ -25,8 +25,6 @@ int main(void){
 
     FsColor color = {255, 128, 0};
 
-    int i = 1;
-
     // main loop
     while (!fsWindowShouldClose(window)){
         fsClear((FsColor){0, 0, 0});

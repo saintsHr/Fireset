@@ -6,11 +6,11 @@
 #include <stdbool.h>
 
 /** 
- * @defgroup Core Core
+ * @defgroup Core
  * @{
  */
 
-inline bool fsInit();
-inline void fsExit();
+bool fsInit();
+void fsExit();
 
 /** @} */

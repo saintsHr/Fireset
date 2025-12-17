@@ -25,6 +25,8 @@
 var NAVTREE =
 [
   [ "Fireset", "index.html", [
+    [ "Introduction", "index.html#Introduction", null ],
+    [ "Installing", "index.html#Installing", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

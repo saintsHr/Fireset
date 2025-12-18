@@ -33,8 +33,8 @@ if you find any issue or have a cool idea/suggestion, share it on github issues 
 
 ---
 
-Copyright (c) 2025 Henrique Rodrigues Santos
-Licensed under the MIT License
-Repo: https://github.com/saintsHr/Fireset
+Copyright (c) 2025 Henrique Rodrigues Santos  
+Licensed under the MIT License  
+Repo: https://github.com/saintsHr/Fireset  
 
 ---

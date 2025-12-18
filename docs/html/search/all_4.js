@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['fireset_0',['Fireset',['../index.html',1,'']]],
+  ['fscircle_1',['FsCircle',['../structFsCircle.html',1,'']]],
+  ['fsclear_2',['fsClear',['../group__Render.html#ga4ba69393b31d27cd62ab990395acff8a',1,'fsClear(FsColor color):&#160;render.c'],['../group__Render.html#ga4ba69393b31d27cd62ab990395acff8a',1,'fsClear(FsColor color):&#160;render.c']]],
+  ['fscolor_3',['FsColor',['../structFsColor.html',1,'']]],
+  ['fscreatewindow_4',['fsCreateWindow',['../group__Window.html#ga6a82d805cad914a2dd446e66cb3469ca',1,'fsCreateWindow(FsWindow *window):&#160;window.c'],['../group__Window.html#ga6a82d805cad914a2dd446e66cb3469ca',1,'fsCreateWindow(FsWindow *window):&#160;window.c']]],
+  ['fsdestroywindow_5',['fsDestroyWindow',['../group__Window.html#gaa1830e4996a8f32d33bf6196ba4115b9',1,'fsDestroyWindow(FsWindow *window):&#160;window.c'],['../group__Window.html#gaa1830e4996a8f32d33bf6196ba4115b9',1,'fsDestroyWindow(FsWindow *window):&#160;window.c']]],
+  ['fsdrawcircle_6',['fsDrawCircle',['../group__Render.html#ga52d55b3d0cb9b9d1ad21e9b73c977448',1,'fsDrawCircle(FsCircle circle):&#160;render.c'],['../group__Render.html#ga52d55b3d0cb9b9d1ad21e9b73c977448',1,'fsDrawCircle(FsCircle circle):&#160;render.c']]],
+  ['fsdrawline_7',['fsDrawLine',['../group__Render.html#gaaa8f058bee870a5fbc0f6183d0999993',1,'fsDrawLine(FsLine line):&#160;render.c'],['../group__Render.html#gaaa8f058bee870a5fbc0f6183d0999993',1,'fsDrawLine(FsLine line):&#160;render.c']]],
+  ['fsdrawpixel_8',['fsDrawPixel',['../group__Render.html#ga399088801e894aa1a926e08c9d4137c9',1,'fsDrawPixel(FsPoint p):&#160;render.c'],['../group__Render.html#ga399088801e894aa1a926e08c9d4137c9',1,'fsDrawPixel(FsPoint p):&#160;render.c']]],
+  ['fsdrawquad_9',['fsDrawQuad',['../group__Render.html#ga08cefa2124d9ea40030a75025cb713d3',1,'fsDrawQuad(FsQuad quad):&#160;render.c'],['../group__Render.html#ga08cefa2124d9ea40030a75025cb713d3',1,'fsDrawQuad(const FsQuad quad):&#160;render.c']]],
+  ['fsdrawtriangle_10',['fsDrawTriangle',['../group__Render.html#ga334d524309ba5ec4310d30b7b8fb94b3',1,'fsDrawTriangle(FsTriangle tri):&#160;render.c'],['../group__Render.html#ga334d524309ba5ec4310d30b7b8fb94b3',1,'fsDrawTriangle(FsTriangle tri):&#160;render.c']]],
+  ['fsexit_11',['fsExit',['../group__Core.html#gafc21c59ed671c34d454856f0eaf61c87',1,'fsExit():&#160;core.c'],['../group__Core.html#gafc21c59ed671c34d454856f0eaf61c87',1,'fsExit():&#160;core.c']]],
+  ['fshandlewindow_12',['fsHandleWindow',['../group__Window.html#ga97a335d2e3ae69bd3fb850037d3c6f7f',1,'fsHandleWindow(FsWindow *window):&#160;window.c'],['../group__Window.html#ga97a335d2e3ae69bd3fb850037d3c6f7f',1,'fsHandleWindow(FsWindow *window):&#160;window.c']]],
+  ['fsinit_13',['fsInit',['../group__Core.html#ga1be1078b8aae25531a2e8425439d3674',1,'fsInit():&#160;core.c'],['../group__Core.html#ga1be1078b8aae25531a2e8425439d3674',1,'fsInit():&#160;core.c']]],
+  ['fsline_14',['FsLine',['../structFsLine.html',1,'']]],
+  ['fspoint_15',['FsPoint',['../structFsPoint.html',1,'']]],
+  ['fsquad_16',['FsQuad',['../structFsQuad.html',1,'']]],
+  ['fssetortho_17',['fsSetOrtho',['../group__Render.html#gace0c9b4e9b9348ad865172f53e794c8c',1,'fsSetOrtho(int width, int height):&#160;render.c'],['../group__Render.html#gace0c9b4e9b9348ad865172f53e794c8c',1,'fsSetOrtho(int width, int height):&#160;render.c']]],
+  ['fstriangle_18',['FsTriangle',['../structFsTriangle.html',1,'']]],
+  ['fsvec2_19',['FsVec2',['../structFsVec2.html',1,'']]],
+  ['fsvec3_20',['FsVec3',['../structFsVec3.html',1,'']]],
+  ['fswindow_21',['FsWindow',['../structFsWindow.html',1,'']]],
+  ['fswindowshouldclose_22',['fsWindowShouldClose',['../group__Window.html#ga5d85cbda490cad2e83322e8dce9f7d1f',1,'fsWindowShouldClose(FsWindow window):&#160;window.c'],['../group__Window.html#ga5d85cbda490cad2e83322e8dce9f7d1f',1,'fsWindowShouldClose(FsWindow window):&#160;window.c']]]
+];

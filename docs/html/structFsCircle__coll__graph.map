@@ -1,0 +1,7 @@
+<map id="FsCircle" name="FsCircle">
+<area shape="rect" id="Node000001" title="Represents a Circle." alt="" coords="49,128,122,156"/>
+<area shape="rect" id="Node000002" href="$structFsVec2.html" title="2D Vector." alt="" coords="5,5,73,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,46,38,76,45,103,54,116,67,128,61,128,50,119,41,105,33,77,34,51"/>
+<area shape="rect" id="Node000003" href="$structFsColor.html" title="Represents Color." alt="" coords="97,5,168,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,46,105,105,94,130,90,126,101,103,122,49"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="FsLine" name="FsLine">
+<area shape="rect" id="Node000001" title="Represents Lines." alt="" coords="54,106,117,134"/>
+<area shape="rect" id="Node000002" href="$structFsVec2.html" title="2D Vector." alt="" coords="5,5,73,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="37,46,40,65,45,81,54,93,67,105,61,106,50,97,41,83,35,66,36,51"/>
+<area shape="rect" id="Node000003" href="$structFsColor.html" title="Represents Color." alt="" coords="97,5,168,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,46,94,107,90,104,117,48"/>
+</map>

@@ -22,39 +22,64 @@ typedef struct{
     uint8_t b; /**< Blue (0-255) */
 }FsColor;
 
+/**
+ * @brief Represents Quads.
+ * 
+ * Represents a quadrilateral object, used on rendering and transforms
+ */
 typedef struct{
-    FsVec2 position;
-    FsVec2 size;
-    FsColor color;
-    float angle;
+    FsVec2 position; /**< Position of the object in the window */
+    FsVec2 size;     /**< Size of the object in the window */
+    FsColor color;   /**< Color of the object in the window */
+    float angle;     /**< Angle of the object in the window */
 }FsQuad;
 
+/**
+ * @brief Represents Triangles.
+ * 
+ * Represents a triangle object, used on rendering and transforms
+ */
 typedef struct{
-    FsVec2 position;
-    FsVec2 size;
-    FsColor color;
-    float angle;
+    FsVec2 position; /**< Position of the object in the window */
+    FsVec2 size;     /**< Size of the object in the window */
+    FsColor color;   /**< Color of the object in the window */
+    float angle;     /**< Angle of the object in the window */
 }FsTriangle;
 
+/**
+ * @brief Represents Point.
+ * 
+ * Represents a single point object, used on rendering and transforms
+ */
 typedef struct{
-    FsVec2 position;
-    FsColor color;
+    FsVec2 position; /**< Position of the object in the window */
+    FsColor color;   /**< Color of the object in the window */
 }FsPoint;
 
+/**
+ * @brief Represents a Circle.
+ * 
+ * Represents a circle object, used on rendering and transforms
+ */
 typedef struct{
-    FsVec2 position;
-    FsVec2 size;
-    FsColor color;
-    float angle;
-    int segments;
+    FsVec2 position; /**< Position of the object in the window */
+    FsVec2 size;     /**< Size of the object in the window */
+    FsColor color;   /**< Color of the object in the window */
+    float angle;     /**< Angle of the object in the window */
+    int segments;    /**< Ammount of segments in the circle */
 }FsCircle;
 
+/**
+ * @brief Represents Lines.
+ * 
+ * Represents a line obhect, used on rendering and transforms
+ */
 typedef struct {
-    FsVec2 position;
-    float length;
-    float angle;
-    float thickness;
-    FsColor color;
+    FsVec2 position; /**< Position of the object in the window */
+    float length;    /**< Total lenght of the line (starting from position) */
+    float angle;     /**< Angle of the object in the window */
+    float thickness; /**< Thickness of the line in the window */
+    FsColor color;   /**< Color of the object in the window */
 }FsLine;
 
 /**

@@ -111,4 +111,4 @@ deb:
 # Cleaning
 # ====================================================
 clean:
-	$(RM) build lib docs fireset-dev.deb fireset-dev
+	$(RM) build lib fireset-dev.deb fireset-dev

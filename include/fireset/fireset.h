@@ -113,8 +113,8 @@
  * ---
  * 
  * \section Quickstart
- * This guide is for those in urge to have a window as fast as possible, \n
- * so heres a simple example:
+ * This guide is for those who want to have a window as fast as possible, \n
+ * or for those who want to take a quick look on the API ,so heres a simple example:
  * 
  * ```c
  *  #include <fireset/fireset.h>

@@ -105,4 +105,27 @@ void fsSetOrtho(int width, int height);
  */
 void fsClear(FsColor color);
 
+/**
+ * @brief Starts Transformation.
+ * 
+ * Starts to listen to transformation commands, such as
+ * Rotate, Scale and Move.
+ */
+void fsBeginTransform();
+
+/**
+ * @brief Stops Transformation.
+ * 
+ * Stop listening to transformation commands, such as
+ * Rotate, Scale and Move.
+ */
+void fsStopTransform();
+
+/**
+ * @brief Moves an object.
+ * 
+ * Moves an object by x, y, and z values.
+ */
+void fsMove(float x, float y, float z);
+
 /** @} */

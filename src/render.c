@@ -79,3 +79,15 @@ void fsSetOrtho(int width, int height){
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void fsBeginTransform(){
+    glPushMatrix();
+}
+
+void fsStopTransform(){
+    glPopMatrix();
+}
+
+void fsMove(float x, float y, float z){
+    glTranslatef(x, y, z);
+}

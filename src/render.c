@@ -3,72 +3,120 @@
 
 #define PI 3.14159265359
 
-void fsDrawTriangle(const FsVec2* vertices, FsColor color){
-    glColor3f(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f);
-    glBegin(GL_TRIANGLES);
-        glVertex2f(vertices[0].x, vertices[0].y);
-        glVertex2f(vertices[1].x, vertices[1].y);
-        glVertex2f(vertices[2].x, vertices[2].y);
-    glEnd();
+void fsDrawTriangle(FsTriangle tri){
+    glPushMatrix();
+        glTranslatef(tri.position.x, tri.position.y, 0.0f);
+        glRotatef(tri.angle, 0, 0, 1.0f);
+        glScalef(tri.size.x, tri.size.y, 1.0f);
+
+        glColor3f(
+            tri.color.r / 255.0f,
+            tri.color.g / 255.0f,
+            tri.color.b / 255.0f
+        );
+
+        glBegin(GL_TRIANGLES);
+            glVertex2f(0.0f, 0.0f);
+            glVertex2f(1.0f, 0.0f);
+            glVertex2f(0.5f, 1.0f);
+        glEnd();
+    glPopMatrix();
 }
 
-void fsDrawPixel(FsVec2 pos, FsColor color){
-    glColor3f(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f);
-    glBegin(GL_POINT);
-        glVertex2f(pos.x, pos.y);
-    glEnd();
+void fsDrawPixel(FsPoint p){
+    glPushMatrix();
+        glTranslatef(p.position.x, p.position.y, 0.0f);
+
+        glColor3f(
+            p.color.r / 255.0f,
+            p.color.g / 255.0f,
+            p.color.b / 255.0f
+        );
+
+        glBegin(GL_POINT);
+            glVertex2f(0.0f, 0.0f);
+        glEnd();
+    glPopMatrix();
 }
 
-void fsDrawLine(FsVec2 p1, FsVec2 p2, FsColor color){
-    glColor3f(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f);
-    glBegin(GL_LINE);
-        glVertex2f(p1.x, p1.y);
-        glVertex2f(p2.x, p2.y);
-    glEnd();
+void fsDrawLine(FsLine line){
+    glPushMatrix();
+        glTranslatef(line.position.x, line.position.y, 0.0f);
+        glRotatef(line.angle, 0.0f, 0.0f, 1.0f);
+        glScalef(line.length, line.thickness, 1.0f);
+
+        glColor3f(
+            line.color.r / 255.0f,
+            line.color.g / 255.0f,
+            line.color.b / 255.0f
+        );
+
+        glBegin(GL_QUADS);
+            glVertex2f(0.0f, -0.5f);
+            glVertex2f(1.0f, -0.5f);
+            glVertex2f(1.0f,  0.5f);
+            glVertex2f(0.0f,  0.5f);
+        glEnd();
+    glPopMatrix();
 }
 
-void fsDrawQuad(const FsVec2* vertices, FsColor color){
-    glColor3f(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f);
-    glBegin(GL_QUADS);
-        glVertex2f(vertices[0].x, vertices[0].y);
-        glVertex2f(vertices[1].x, vertices[1].y);
-        glVertex2f(vertices[2].x, vertices[2].y);
-        glVertex2f(vertices[3].x, vertices[3].y);
-    glEnd();
+void fsDrawQuad(FsQuad quad){
+    glPushMatrix();
+        glTranslatef(quad.position.x, quad.position.y, 0.0f);
+        glRotatef(quad.angle, 0, 0, 1.0f);
+        glScalef(quad.size.x, quad.size.y, 1.0f);
+
+        glColor3f(
+            quad.color.r / 255.0f,
+            quad.color.g / 255.0f,
+            quad.color.b / 255.0f
+        );
+
+        glBegin(GL_QUADS);
+            glVertex2f(0, 0);
+            glVertex2f(1, 0);
+            glVertex2f(1, 1);
+            glVertex2f(0, 1);
+        glEnd();
+    glPopMatrix();
 }
 
-void fsDrawCircle(FsVec2 center, int radius, int segments, FsColor color){
-    if (segments < 8) segments = 8;
+void fsDrawCircle(FsCircle circle){
+    int segments = circle.segments;
+    if (segments < 8)   segments = 8;
     if (segments > 128) segments = 128;
 
-    FsVec2 vertices[segments];
+    glPushMatrix();
+        glTranslatef(circle.position.x, circle.position.y, 0.0f);
+        glRotatef(circle.angle, 0.0f, 0.0f, 1.0f);
+        glScalef(circle.size.x, circle.size.y, 1.0f);
 
-    for (int i = 0; i < segments; i++){
-        float theta = i * 2.0f * PI / segments;
-        vertices[i].x = center.x + radius * cos(theta);
-        vertices[i].y = center.y + radius * sin(theta);
-    }
+        glColor3f(
+            circle.color.r / 255.0f,
+            circle.color.g / 255.0f,
+            circle.color.b / 255.0f
+        );
 
-    for (int i = 0; i < segments; i++){
-        int next = (i + 1) % segments;
-        FsVec2 triangle[3] = {center, vertices[i], vertices[next]};
-        fsDrawTriangle(triangle, color);
-    }
-}
-
-void fsDrawPolygon(const FsVec2* vertices, int count, FsColor color){
-    if(count < 3) return;
-
-    FsVec2 center = vertices[0];
-
-    for(int i = 1; i < count - 1; i++){
-        FsVec2 triangle[3] = {center, vertices[i], vertices[i+1]};
-        fsDrawTriangle(triangle, color);
-    }
+        glBegin(GL_TRIANGLE_FAN);
+            glVertex2f(0.5f, 0.5f);
+            for(int i = 0; i <= segments; i++){
+                float theta = (float)i / (float)segments * 2.0f * PI;
+                float x = 0.5f + cosf(theta) * 0.5f;
+                float y = 0.5f + sinf(theta) * 0.5f;
+                glVertex2f(x, y);
+            }
+        glEnd();
+    glPopMatrix();
 }
 
 void fsClear(FsColor color){
-    glClearColor(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f, 1.0f);
+    glClearColor(
+        color.r / 255.0f,
+        color.g / 255.0f,
+        color.b / 255.0f,
+        1.0f
+    );
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
@@ -78,16 +126,4 @@ void fsSetOrtho(int width, int height){
     glOrtho(0, width, height, 0, -1, 1);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-}
-
-void fsBeginTransform(){
-    glPushMatrix();
-}
-
-void fsStopTransform(){
-    glPopMatrix();
-}
-
-void fsMove(float x, float y, float z){
-    glTranslatef(x, y, z);
 }

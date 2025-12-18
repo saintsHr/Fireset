@@ -22,6 +22,41 @@ typedef struct{
     uint8_t b; /**< Blue (0-255) */
 }FsColor;
 
+typedef struct{
+    FsVec2 position;
+    FsVec2 size;
+    FsColor color;
+    float angle;
+}FsQuad;
+
+typedef struct{
+    FsVec2 position;
+    FsVec2 size;
+    FsColor color;
+    float angle;
+}FsTriangle;
+
+typedef struct{
+    FsVec2 position;
+    FsColor color;
+}FsPoint;
+
+typedef struct{
+    FsVec2 position;
+    FsVec2 size;
+    FsColor color;
+    float angle;
+    int segments;
+}FsCircle;
+
+typedef struct {
+    FsVec2 position;
+    float length;
+    float angle;
+    float thickness;
+    FsColor color;
+}FsLine;
+
 /**
  * @brief Draws a pixel.
  * 
@@ -30,7 +65,7 @@ typedef struct{
  * @param pos The position to plot the pixel on the window.
  * @param color The color of the pixel to be plotted on the window.
  */
-void fsDrawPixel(FsVec2 pos, FsColor color);
+void fsDrawPixel(FsPoint p);
 
 /**
  * @brief Draws a line.
@@ -41,7 +76,7 @@ void fsDrawPixel(FsVec2 pos, FsColor color);
  * @param p2 The second point used to draw the line.
  * @param color Color used to draw the line.
  */
-void fsDrawLine(FsVec2 p1, FsVec2 p2, FsColor color);
+void fsDrawLine(FsLine line);
 
 /**
  * @brief Draws a triangle.
@@ -51,7 +86,7 @@ void fsDrawLine(FsVec2 p1, FsVec2 p2, FsColor color);
  * @param vertices The 3 vertices used to draw the triangle.
  * @param color Color used to draw the triangle.
  */
-void fsDrawTriangle(const FsVec2* vertices, FsColor color);
+void fsDrawTriangle(FsTriangle tri);
 
 /**
  * @brief Draws a quadrilateral.
@@ -61,7 +96,7 @@ void fsDrawTriangle(const FsVec2* vertices, FsColor color);
  * @param vertices The 4 vertices used to draw the quadrilateral.
  * @param color Color used to draw the quadrilateral.
  */
-void fsDrawQuad(const FsVec2* vertices, FsColor color);
+void fsDrawQuad(const FsQuad quad);
 
 /**
  * @brief Draws a circle.
@@ -73,18 +108,7 @@ void fsDrawQuad(const FsVec2* vertices, FsColor color);
  * @param segments The amount of segments used to draw the circle.
  * @param color Color used to draw the circle.
  */
-void fsDrawCircle(FsVec2 center, int radius, int segments, FsColor color);
-
-/**
- * @brief Draws a polygon.
- * 
- * Draws a colored, custom polygon on the window.
- * 
- * @param vertices The vertices used to draw the polygon.
- * @param count The total amount of vertices on the polygon.
- * @param color Color used to draw the polygon.
- */
-void fsDrawPolygon(const FsVec2* vertices, int count, FsColor color);
+void fsDrawCircle(FsCircle circle);
 
 /**
  * @brief Sets ortographic view.
@@ -104,28 +128,5 @@ void fsSetOrtho(int width, int height);
  * @param color The color used to clear the window.
  */
 void fsClear(FsColor color);
-
-/**
- * @brief Starts Transformation.
- * 
- * Starts to listen to transformation commands, such as
- * Rotate, Scale and Move.
- */
-void fsBeginTransform();
-
-/**
- * @brief Stops Transformation.
- * 
- * Stop listening to transformation commands, such as
- * Rotate, Scale and Move.
- */
-void fsStopTransform();
-
-/**
- * @brief Moves an object.
- * 
- * Moves an object by x, y, and z values.
- */
-void fsMove(float x, float y, float z);
 
 /** @} */

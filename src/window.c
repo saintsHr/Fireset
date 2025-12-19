@@ -4,6 +4,7 @@
 
 #include "fireset/window.h"
 #include "fireset/render.h"
+#include "fireset/input.h"
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -35,6 +36,7 @@ FsWindow* fsCreateWindow(FsWindow* window){
 }
 
 void fsHandleWindow(FsWindow* window){
+    fsUpdateKeyboard(window);
     glfwGetWindowSize(window->handle, &window->width, &window->height);
     glfwSwapBuffers(window->handle);
     glfwPollEvents();

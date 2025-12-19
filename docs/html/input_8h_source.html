@@ -98,102 +98,106 @@ $(function(){initNavTree('input_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;fireset/window.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    FS_KEY_A = GLFW_KEY_A,</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    FS_KEY_B = GLFW_KEY_B,</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    FS_KEY_C = GLFW_KEY_C,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    FS_KEY_D = GLFW_KEY_D,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    FS_KEY_E = GLFW_KEY_E,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    FS_KEY_F = GLFW_KEY_F,</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    FS_KEY_G = GLFW_KEY_G,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    FS_KEY_H = GLFW_KEY_H,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    FS_KEY_I = GLFW_KEY_I,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    FS_KEY_J = GLFW_KEY_J,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    FS_KEY_K = GLFW_KEY_K,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    FS_KEY_L = GLFW_KEY_L,</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    FS_KEY_M = GLFW_KEY_M,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    FS_KEY_N = GLFW_KEY_N,</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    FS_KEY_O = GLFW_KEY_O,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    FS_KEY_P = GLFW_KEY_P,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    FS_KEY_Q = GLFW_KEY_Q,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    FS_KEY_R = GLFW_KEY_R,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    FS_KEY_S = GLFW_KEY_S,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    FS_KEY_T = GLFW_KEY_T,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    FS_KEY_U = GLFW_KEY_U,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    FS_KEY_V = GLFW_KEY_V,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    FS_KEY_W = GLFW_KEY_W,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    FS_KEY_X = GLFW_KEY_X,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    FS_KEY_Y = GLFW_KEY_Y,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    FS_KEY_Z = GLFW_KEY_Z,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    FS_KEY_0 = GLFW_KEY_0,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    FS_KEY_1 = GLFW_KEY_1,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    FS_KEY_2 = GLFW_KEY_2,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    FS_KEY_3 = GLFW_KEY_3,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    FS_KEY_4 = GLFW_KEY_4,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    FS_KEY_5 = GLFW_KEY_5,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    FS_KEY_6 = GLFW_KEY_6,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    FS_KEY_7 = GLFW_KEY_7,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    FS_KEY_8 = GLFW_KEY_8,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    FS_KEY_9 = GLFW_KEY_9,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    FS_KEY_SPACE      = GLFW_KEY_SPACE,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    FS_KEY_MINUS      = GLFW_KEY_MINUS,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    FS_KEY_EQUAL      = GLFW_KEY_EQUAL,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    FS_KEY_LEFT_BRACKET  = GLFW_KEY_LEFT_BRACKET,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    FS_KEY_RIGHT_BRACKET = GLFW_KEY_RIGHT_BRACKET,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    FS_KEY_BACKSLASH  = GLFW_KEY_BACKSLASH,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    FS_KEY_SEMICOLON  = GLFW_KEY_SEMICOLON,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    FS_KEY_APOSTROPHE = GLFW_KEY_APOSTROPHE,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    FS_KEY_COMMA      = GLFW_KEY_COMMA, </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    FS_KEY_PERIOD     = GLFW_KEY_PERIOD,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    FS_KEY_SLASH      = GLFW_KEY_SLASH,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    FS_KEY_ESCAPE     = GLFW_KEY_ESCAPE,</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    FS_KEY_ENTER      = GLFW_KEY_ENTER,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    FS_KEY_TAB        = GLFW_KEY_TAB,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    FS_KEY_BACKSPACE  = GLFW_KEY_BACKSPACE,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    FS_KEY_LEFT_SHIFT   = GLFW_KEY_LEFT_SHIFT,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    FS_KEY_RIGHT_SHIFT  = GLFW_KEY_RIGHT_SHIFT,</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    FS_KEY_LEFT_CONTROL = GLFW_KEY_LEFT_CONTROL,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    FS_KEY_RIGHT_CONTROL= GLFW_KEY_RIGHT_CONTROL,</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    FS_KEY_LEFT_ALT     = GLFW_KEY_LEFT_ALT,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    FS_KEY_RIGHT_ALT    = GLFW_KEY_RIGHT_ALT,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    FS_KEY_LEFT_SUPER   = GLFW_KEY_LEFT_SUPER,</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    FS_KEY_RIGHT_SUPER  = GLFW_KEY_RIGHT_SUPER,</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    FS_KEY_MENU         = GLFW_KEY_MENU,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    FS_KEY_UP     = GLFW_KEY_UP,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    FS_KEY_DOWN   = GLFW_KEY_DOWN,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    FS_KEY_LEFT   = GLFW_KEY_LEFT,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    FS_KEY_RIGHT  = GLFW_KEY_RIGHT,</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    FS_KEY_NUM_LOCK    = GLFW_KEY_NUM_LOCK,</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    FS_KEY_KP_0        = GLFW_KEY_KP_0,</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    FS_KEY_KP_1        = GLFW_KEY_KP_1,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    FS_KEY_KP_2        = GLFW_KEY_KP_2,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    FS_KEY_KP_3        = GLFW_KEY_KP_3,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    FS_KEY_KP_4        = GLFW_KEY_KP_4,</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    FS_KEY_KP_5        = GLFW_KEY_KP_5,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    FS_KEY_KP_6        = GLFW_KEY_KP_6,</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    FS_KEY_KP_7        = GLFW_KEY_KP_7,</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    FS_KEY_KP_8        = GLFW_KEY_KP_8,</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    FS_KEY_KP_9        = GLFW_KEY_KP_9,</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    FS_KEY_KP_DECIMAL  = GLFW_KEY_KP_DECIMAL,</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    FS_KEY_KP_DIVIDE   = GLFW_KEY_KP_DIVIDE,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    FS_KEY_KP_MULTIPLY = GLFW_KEY_KP_MULTIPLY,</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    FS_KEY_KP_SUBTRACT = GLFW_KEY_KP_SUBTRACT,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    FS_KEY_KP_ADD      = GLFW_KEY_KP_ADD,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    FS_KEY_KP_ENTER    = GLFW_KEY_KP_ENTER,</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    FS_KEY_KP_EQUAL    = GLFW_KEY_KP_EQUAL</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}FsKey;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> fsUpdateKeyboard(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">bool</span> fsIsKeyJustPressed(FsKey key);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordtype">bool</span> fsIsKeyJustReleased(FsKey key);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">bool</span> fsIsKeyDown(FsKey key);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">bool</span> fsIsKeyUp(FsKey key);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    FS_KEY_A = GLFW_KEY_A,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    FS_KEY_B = GLFW_KEY_B,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    FS_KEY_C = GLFW_KEY_C,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    FS_KEY_D = GLFW_KEY_D,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    FS_KEY_E = GLFW_KEY_E,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    FS_KEY_F = GLFW_KEY_F,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    FS_KEY_G = GLFW_KEY_G,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    FS_KEY_H = GLFW_KEY_H,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    FS_KEY_I = GLFW_KEY_I,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    FS_KEY_J = GLFW_KEY_J,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    FS_KEY_K = GLFW_KEY_K,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    FS_KEY_L = GLFW_KEY_L,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    FS_KEY_M = GLFW_KEY_M,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    FS_KEY_N = GLFW_KEY_N,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    FS_KEY_O = GLFW_KEY_O,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    FS_KEY_P = GLFW_KEY_P,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    FS_KEY_Q = GLFW_KEY_Q,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    FS_KEY_R = GLFW_KEY_R,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    FS_KEY_S = GLFW_KEY_S,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    FS_KEY_T = GLFW_KEY_T,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    FS_KEY_U = GLFW_KEY_U,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    FS_KEY_V = GLFW_KEY_V,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    FS_KEY_W = GLFW_KEY_W,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    FS_KEY_X = GLFW_KEY_X,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    FS_KEY_Y = GLFW_KEY_Y,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    FS_KEY_Z = GLFW_KEY_Z,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    FS_KEY_0 = GLFW_KEY_0,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    FS_KEY_1 = GLFW_KEY_1,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    FS_KEY_2 = GLFW_KEY_2,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    FS_KEY_3 = GLFW_KEY_3,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    FS_KEY_4 = GLFW_KEY_4,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    FS_KEY_5 = GLFW_KEY_5,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    FS_KEY_6 = GLFW_KEY_6,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    FS_KEY_7 = GLFW_KEY_7,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    FS_KEY_8 = GLFW_KEY_8,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    FS_KEY_9 = GLFW_KEY_9,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    FS_KEY_SPACE      = GLFW_KEY_SPACE,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    FS_KEY_MINUS      = GLFW_KEY_MINUS,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    FS_KEY_EQUAL      = GLFW_KEY_EQUAL,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    FS_KEY_LEFT_BRACKET  = GLFW_KEY_LEFT_BRACKET,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    FS_KEY_RIGHT_BRACKET = GLFW_KEY_RIGHT_BRACKET,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    FS_KEY_BACKSLASH  = GLFW_KEY_BACKSLASH,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    FS_KEY_SEMICOLON  = GLFW_KEY_SEMICOLON,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    FS_KEY_APOSTROPHE = GLFW_KEY_APOSTROPHE,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    FS_KEY_COMMA      = GLFW_KEY_COMMA, </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    FS_KEY_PERIOD     = GLFW_KEY_PERIOD,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    FS_KEY_SLASH      = GLFW_KEY_SLASH,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    FS_KEY_ESCAPE     = GLFW_KEY_ESCAPE,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    FS_KEY_ENTER      = GLFW_KEY_ENTER,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    FS_KEY_TAB        = GLFW_KEY_TAB,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    FS_KEY_BACKSPACE  = GLFW_KEY_BACKSPACE,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    FS_KEY_LEFT_SHIFT   = GLFW_KEY_LEFT_SHIFT,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    FS_KEY_RIGHT_SHIFT  = GLFW_KEY_RIGHT_SHIFT,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    FS_KEY_LEFT_CONTROL = GLFW_KEY_LEFT_CONTROL,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    FS_KEY_RIGHT_CONTROL= GLFW_KEY_RIGHT_CONTROL,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    FS_KEY_LEFT_ALT     = GLFW_KEY_LEFT_ALT,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    FS_KEY_RIGHT_ALT    = GLFW_KEY_RIGHT_ALT,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    FS_KEY_LEFT_SUPER   = GLFW_KEY_LEFT_SUPER,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    FS_KEY_RIGHT_SUPER  = GLFW_KEY_RIGHT_SUPER,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    FS_KEY_MENU         = GLFW_KEY_MENU,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    FS_KEY_UP     = GLFW_KEY_UP,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    FS_KEY_DOWN   = GLFW_KEY_DOWN,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    FS_KEY_LEFT   = GLFW_KEY_LEFT,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    FS_KEY_RIGHT  = GLFW_KEY_RIGHT,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    FS_KEY_NUM_LOCK    = GLFW_KEY_NUM_LOCK,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    FS_KEY_KP_0        = GLFW_KEY_KP_0,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    FS_KEY_KP_1        = GLFW_KEY_KP_1,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    FS_KEY_KP_2        = GLFW_KEY_KP_2,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    FS_KEY_KP_3        = GLFW_KEY_KP_3,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    FS_KEY_KP_4        = GLFW_KEY_KP_4,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    FS_KEY_KP_5        = GLFW_KEY_KP_5,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    FS_KEY_KP_6        = GLFW_KEY_KP_6,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    FS_KEY_KP_7        = GLFW_KEY_KP_7,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    FS_KEY_KP_8        = GLFW_KEY_KP_8,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    FS_KEY_KP_9        = GLFW_KEY_KP_9,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    FS_KEY_KP_DECIMAL  = GLFW_KEY_KP_DECIMAL,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    FS_KEY_KP_DIVIDE   = GLFW_KEY_KP_DIVIDE,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    FS_KEY_KP_MULTIPLY = GLFW_KEY_KP_MULTIPLY,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    FS_KEY_KP_SUBTRACT = GLFW_KEY_KP_SUBTRACT,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    FS_KEY_KP_ADD      = GLFW_KEY_KP_ADD,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    FS_KEY_KP_ENTER    = GLFW_KEY_KP_ENTER,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    FS_KEY_KP_EQUAL    = GLFW_KEY_KP_EQUAL</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}FsKey;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keywordtype">void</span> fsUpdateKeyboard(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">bool</span> fsIsKeyJustPressed(FsKey key);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keywordtype">bool</span> fsIsKeyJustReleased(FsKey key);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keywordtype">bool</span> fsIsKeyDown(FsKey key);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keywordtype">bool</span> fsIsKeyUp(FsKey key);</div>
 <div class="ttc" id="astructFsWindow_html"><div class="ttname"><a href="structFsWindow.html">FsWindow</a></div><div class="ttdoc">Window struct.</div><div class="ttdef"><b>Definition</b> window.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

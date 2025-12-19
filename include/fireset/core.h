@@ -21,12 +21,12 @@
  * @retval true success, engine initialized
  * @retval false failed, engine not initialized
  */
-bool fsInit();
+bool fsInit(void);
 
 /**
  * @brief Shutdowns the engine, should be called on the end of the program, after using
  * the engine
  */
-void fsExit();
+void fsExit(void);
 
 /** @} */

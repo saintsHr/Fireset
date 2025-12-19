@@ -25,9 +25,6 @@ FsWindow* fsCreateWindow(FsWindow* window){
     glfwMakeContextCurrent(window->handle);
     glViewport(0, 0, window->width, window->height);
 
-    // enables depth test for 3D
-    glEnable(GL_DEPTH_TEST);
-
     // sets orthographic view
     fsSetOrtho(window->width, window->height);
 

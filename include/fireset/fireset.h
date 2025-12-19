@@ -8,6 +8,7 @@
 #include "fireset/core.h"
 #include "fireset/render.h"
 #include "fireset/vertex.h"
+#include "fireset/fstime.h"
 
 /**
  * \mainpage Fireset

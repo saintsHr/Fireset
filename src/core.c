@@ -3,12 +3,14 @@
 // Repo: https://github.com/saintsHr/Fireset
 
 #include "fireset/core.h"
+#include "fireset/fstime.h"
 
-bool fsInit(){
+bool fsInit(void){
     if(!glfwInit()) return false;
+    fsTimeInit();
     return true;
 }
 
-void fsExit(){
+void fsExit(void){
     glfwTerminate();
 }

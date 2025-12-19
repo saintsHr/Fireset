@@ -1,5 +1,10 @@
 #pragma once
 
+/** 
+ * @defgroup Time
+ * @{
+ */
+
 /**
  * @brief Gets time.
  * 
@@ -20,3 +25,5 @@ double fsGetDeltaTime(void);
  * Initializes the time module of the engine.
 */
 void fsTimeInit(void);
+
+/** @} */

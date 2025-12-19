@@ -5,6 +5,11 @@
 
 #include "fireset/window.h"
 
+/** 
+ * @defgroup input
+ * @{
+ */
+
 /**
  * @brief Keys Enum.
  * 
@@ -147,3 +152,5 @@ bool fsIsKeyDown(FsKey key);
  * @retval false key down.
  */
 bool fsIsKeyUp(FsKey key);
+
+/** @} */

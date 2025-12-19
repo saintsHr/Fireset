@@ -1,5 +1,5 @@
 var group__Core =
 [
-    [ "fsExit", "group__Core.html#gafc21c59ed671c34d454856f0eaf61c87", null ],
-    [ "fsInit", "group__Core.html#ga1be1078b8aae25531a2e8425439d3674", null ]
+    [ "fsExit", "group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb", null ],
+    [ "fsInit", "group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3", null ]
 ];

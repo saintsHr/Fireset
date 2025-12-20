@@ -36,7 +36,7 @@ FsWindow* fsCreateWindow(FsWindow* window){
 }
 
 void fsHandleWindow(FsWindow* window){
-    fsUpdateKeyboard(window);
+    fsUpdateInput(window);
     glfwGetWindowSize(window->handle, &window->width, &window->height);
     glfwSwapBuffers(window->handle);
     glfwPollEvents();

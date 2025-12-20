@@ -202,7 +202,7 @@ bool fsIsMouseButtonDown(const FsWindow* window, FsMouseButton bt);
  * @param bt Mouse button to check (FS_LMB, FS_RMB, FS_MMB).
  * @return true if the button was just pressed, false otherwise.
  */
-bool fsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt);
+bool fsIsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt);
 
 /**
  * @brief Checks if a mouse button was just released.
@@ -214,6 +214,6 @@ bool fsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt);
  * @param bt Mouse button to check (FS_LMB, FS_RMB, FS_MMB).
  * @return true if the button was just released, false otherwise.
  */
-bool fsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt);
+bool fsIsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt);
 
 /** @} */

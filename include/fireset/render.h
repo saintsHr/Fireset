@@ -5,151 +5,160 @@
 #pragma once
 
 #include <GL/gl.h>
-#include "stdint.h"
+#include <stdint.h>
 #include "fireset/vertex.h"
 
 /** 
- * @defgroup Render
+ * @defgroup Render Render
+ * @brief Basic 2D rendering primitives.
  * @{
  */
 
 /**
- * @brief Represents Color.
- * 
- * The main color format of the library, uses 3, 8-bit integers
- * to represent colors in te RGB format, used for many things such as
- * primitive drawing, window background, clear color, etc. 
+ * @brief RGB color representation.
+ *
+ * Represents a color using three 8-bit integer components
+ * in the RGB color space.
  */
 typedef struct{
-    uint8_t r; /**< Red (0-255) */
-    uint8_t g; /**< Green (0-255) */
-    uint8_t b; /**< Blue (0-255) */
-}FsColor;
+    uint8_t r; /**< Red component (0–255) */
+    uint8_t g; /**< Green component (0–255) */
+    uint8_t b; /**< Blue component (0–255) */
+} FsColor;
 
 /**
- * @brief Represents Quads.
- * 
- * Represents a quadrilateral object, used on rendering and transforms
+ * @brief Quadrilateral primitive.
+ *
+ * Represents a quadrilateral used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Position of the object in the window */
-    FsVec2 size;     /**< Size of the object in the window */
-    FsColor color;   /**< Color of the object in the window */
-    float angle;     /**< Angle of the object in the window */
-}FsQuad;
+    FsVec2 position; /**< Position in window space */
+    FsVec2 size;     /**< Size in window space */
+    FsColor color;   /**< Color */
+    float angle;     /**< Rotation angle */
+} FsQuad;
 
 /**
- * @brief Represents Triangles.
- * 
- * Represents a triangle object, used on rendering and transforms
+ * @brief Triangle primitive.
+ *
+ * Represents a triangle used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Position of the object in the window */
-    FsVec2 size;     /**< Size of the object in the window */
-    FsColor color;   /**< Color of the object in the window */
-    float angle;     /**< Angle of the object in the window */
-}FsTriangle;
+    FsVec2 position; /**< Position in window space */
+    FsVec2 size;     /**< Size in window space */
+    FsColor color;   /**< Color */
+    float angle;     /**< Rotation angle */
+} FsTriangle;
 
 /**
- * @brief Represents Point.
- * 
- * Represents a single point object, used on rendering and transforms
+ * @brief Point primitive.
+ *
+ * Represents a single point used for rendering.
  */
 typedef struct{
-    FsVec2 position; /**< Position of the object in the window */
-    FsColor color;   /**< Color of the object in the window */
-}FsPoint;
+    FsVec2 position; /**< Position in window space */
+    FsColor color;   /**< Color */
+} FsPoint;
 
 /**
- * @brief Represents a Circle.
- * 
- * Represents a circle object, used on rendering and transforms
+ * @brief Circle primitive.
+ *
+ * Represents a circle used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Position of the object in the window */
-    FsVec2 size;     /**< Size of the object in the window */
-    FsColor color;   /**< Color of the object in the window */
-    float angle;     /**< Angle of the object in the window */
-    int segments;    /**< Ammount of segments in the circle */
-}FsCircle;
+    FsVec2 position; /**< Position in window space */
+    FsVec2 size;     /**< Size in window space */
+    FsColor color;   /**< Color */
+    float angle;     /**< Rotation angle */
+    int segments;    /**< Number of segments used to approximate the circle */
+} FsCircle;
 
 /**
- * @brief Represents Lines.
- * 
- * Represents a line obhect, used on rendering and transforms
+ * @brief Line primitive.
+ *
+ * Represents a line used for rendering and transformations.
  */
 typedef struct {
-    FsVec2 position; /**< Position of the object in the window */
-    float length;    /**< Total lenght of the line (starting from position) */
-    float angle;     /**< Angle of the object in the window */
-    float thickness; /**< Thickness of the line in the window */
-    FsColor color;   /**< Color of the object in the window */
-}FsLine;
+    FsVec2 position; /**< Starting position in window space */
+    float length;    /**< Line length */
+    float angle;     /**< Rotation angle */
+    float thickness; /**< Line thickness */
+    FsColor color;   /**< Color */
+} FsLine;
 
 /**
  * @brief Draws a pixel.
- * 
- * Draws a colored point/pixel on a specific position on the window.
- * 
- * @param p Object to draw.
+ *
+ * Draws a colored point at the specified position.
+ *
+ * @param p Point to draw.
  */
 void fsDrawPixel(const FsPoint* p);
 
 /**
  * @brief Draws a line.
- * 
- * Draws a colored line between 2 points on the window.
- * 
- * @param line Object to draw.
+ *
+ * Draws a colored line using the provided line parameters.
+ *
+ * @param line Line to draw.
  */
 void fsDrawLine(const FsLine* line);
 
 /**
  * @brief Draws a triangle.
- * 
- * Draws a colored triangle on the window.
- * 
- * @param tri Object to draw.
+ *
+ * Draws a colored triangle.
+ *
+ * @param tri Triangle to draw.
  */
 void fsDrawTriangle(const FsTriangle* tri);
 
 /**
  * @brief Draws a quadrilateral.
- * 
- * Draws a colored quadrilateral on the window.
- * 
- * @param quad Object to draw.
+ *
+ * Draws a colored quadrilateral.
+ *
+ * @param quad Quadrilateral to draw.
  */
 void fsDrawQuad(const FsQuad* quad);
 
 /**
  * @brief Draws a circle.
- * 
- * Draws a colored circle on the window.
- * 
- * @param circle Object to draw.
+ *
+ * Draws a colored circle.
+ *
+ * @param circle Circle to draw.
  */
 void fsDrawCircle(const FsCircle* circle);
 
 /**
- * @brief Sets ortographic view.
- * 
- * Defines the orthographic view/rendering of the window.
- * 
- * @param width the width of the orthograpich view.
- * @param height the height of the orthograpich view.
+ * @brief Sets the orthographic projection.
+ *
+ * Defines the orthographic rendering view for the current window.
+ *
+ * @param width  Width of the orthographic view.
+ * @param height Height of the orthographic view.
  */
 void fsSetOrtho(int width, int height);
 
 /**
  * @brief Clears the window.
- * 
- * Clears the window & OpenGL context, removing any rendering done.
- * 
- * @param color The color used to clear the window.
+ *
+ * Clears the window and the OpenGL context using the specified color.
+ *
+ * @param color Clear color.
  */
 void fsClear(FsColor color);
 
-FsColor FsColor_new(float r, float g, float b);
+/**
+ * @brief Creates a color.
+ *
+ * @param r Red component (0-255).
+ * @param g Green component (0-255).
+ * @param b Blue component (0-255).
+ *
+ * @return Resulting color.
+ */
+FsColor FsColor_new(uint8_t r, uint8_t g, uint8_t b);
 
 /** @} */

@@ -1,3 +1,7 @@
+// Copyright (c) 2025 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Repo: https://github.com/saintsHr/Fireset
+
 #pragma once
 
 #include <GLFW/glfw3.h>
@@ -6,15 +10,16 @@
 #include "fireset/window.h"
 
 /** 
- * @defgroup input
+ * @defgroup Input Input
+ * @brief Keyboard input handling.
  * @{
  */
 
 /**
- * @brief Keys Enum.
- * 
- * keys enum used by the engine for most input
- * related functions.
+ * @brief Keyboard key codes.
+ *
+ * Enumeration of keyboard keys used by the engine.
+ * Values map directly to GLFW key codes.
  */
 typedef enum{
     FS_KEY_A = GLFW_KEY_A,
@@ -55,36 +60,36 @@ typedef enum{
     FS_KEY_8 = GLFW_KEY_8,
     FS_KEY_9 = GLFW_KEY_9,
 
-    FS_KEY_SPACE      = GLFW_KEY_SPACE,
-    FS_KEY_MINUS      = GLFW_KEY_MINUS,
-    FS_KEY_EQUAL      = GLFW_KEY_EQUAL,
+    FS_KEY_SPACE         = GLFW_KEY_SPACE,
+    FS_KEY_MINUS         = GLFW_KEY_MINUS,
+    FS_KEY_EQUAL         = GLFW_KEY_EQUAL,
     FS_KEY_LEFT_BRACKET  = GLFW_KEY_LEFT_BRACKET,
     FS_KEY_RIGHT_BRACKET = GLFW_KEY_RIGHT_BRACKET,
-    FS_KEY_BACKSLASH  = GLFW_KEY_BACKSLASH,
-    FS_KEY_SEMICOLON  = GLFW_KEY_SEMICOLON,
-    FS_KEY_APOSTROPHE = GLFW_KEY_APOSTROPHE,
-    FS_KEY_COMMA      = GLFW_KEY_COMMA, 
-    FS_KEY_PERIOD     = GLFW_KEY_PERIOD,
-    FS_KEY_SLASH      = GLFW_KEY_SLASH,
+    FS_KEY_BACKSLASH     = GLFW_KEY_BACKSLASH,
+    FS_KEY_SEMICOLON     = GLFW_KEY_SEMICOLON,
+    FS_KEY_APOSTROPHE    = GLFW_KEY_APOSTROPHE,
+    FS_KEY_COMMA         = GLFW_KEY_COMMA,
+    FS_KEY_PERIOD        = GLFW_KEY_PERIOD,
+    FS_KEY_SLASH         = GLFW_KEY_SLASH,
 
-    FS_KEY_ESCAPE     = GLFW_KEY_ESCAPE,
-    FS_KEY_ENTER      = GLFW_KEY_ENTER,
-    FS_KEY_TAB        = GLFW_KEY_TAB,
-    FS_KEY_BACKSPACE  = GLFW_KEY_BACKSPACE,
-    FS_KEY_LEFT_SHIFT   = GLFW_KEY_LEFT_SHIFT,
-    FS_KEY_RIGHT_SHIFT  = GLFW_KEY_RIGHT_SHIFT,
-    FS_KEY_LEFT_CONTROL = GLFW_KEY_LEFT_CONTROL,
-    FS_KEY_RIGHT_CONTROL= GLFW_KEY_RIGHT_CONTROL,
-    FS_KEY_LEFT_ALT     = GLFW_KEY_LEFT_ALT,
-    FS_KEY_RIGHT_ALT    = GLFW_KEY_RIGHT_ALT,
-    FS_KEY_LEFT_SUPER   = GLFW_KEY_LEFT_SUPER,
-    FS_KEY_RIGHT_SUPER  = GLFW_KEY_RIGHT_SUPER,
-    FS_KEY_MENU         = GLFW_KEY_MENU,
+    FS_KEY_ESCAPE        = GLFW_KEY_ESCAPE,
+    FS_KEY_ENTER         = GLFW_KEY_ENTER,
+    FS_KEY_TAB           = GLFW_KEY_TAB,
+    FS_KEY_BACKSPACE     = GLFW_KEY_BACKSPACE,
+    FS_KEY_LEFT_SHIFT    = GLFW_KEY_LEFT_SHIFT,
+    FS_KEY_RIGHT_SHIFT   = GLFW_KEY_RIGHT_SHIFT,
+    FS_KEY_LEFT_CONTROL  = GLFW_KEY_LEFT_CONTROL,
+    FS_KEY_RIGHT_CONTROL = GLFW_KEY_RIGHT_CONTROL,
+    FS_KEY_LEFT_ALT      = GLFW_KEY_LEFT_ALT,
+    FS_KEY_RIGHT_ALT     = GLFW_KEY_RIGHT_ALT,
+    FS_KEY_LEFT_SUPER    = GLFW_KEY_LEFT_SUPER,
+    FS_KEY_RIGHT_SUPER   = GLFW_KEY_RIGHT_SUPER,
+    FS_KEY_MENU          = GLFW_KEY_MENU,
 
-    FS_KEY_UP     = GLFW_KEY_UP,
-    FS_KEY_DOWN   = GLFW_KEY_DOWN,
-    FS_KEY_LEFT   = GLFW_KEY_LEFT,
-    FS_KEY_RIGHT  = GLFW_KEY_RIGHT,
+    FS_KEY_UP    = GLFW_KEY_UP,
+    FS_KEY_DOWN  = GLFW_KEY_DOWN,
+    FS_KEY_LEFT  = GLFW_KEY_LEFT,
+    FS_KEY_RIGHT = GLFW_KEY_RIGHT,
 
     FS_KEY_NUM_LOCK    = GLFW_KEY_NUM_LOCK,
     FS_KEY_KP_0        = GLFW_KEY_KP_0,
@@ -104,52 +109,60 @@ typedef enum{
     FS_KEY_KP_ADD      = GLFW_KEY_KP_ADD,
     FS_KEY_KP_ENTER    = GLFW_KEY_KP_ENTER,
     FS_KEY_KP_EQUAL    = GLFW_KEY_KP_EQUAL
-}FsKey;
+} FsKey;
 
 /**
- * @brief Keyboard Update.
- * 
- * Updates the keyboard and keys states.
+ * @brief Updates the keyboard state.
+ *
+ * Updates internal key state tracking for the given window.
+ *
+ * @param window Target window.
  */
 void fsUpdateKeyboard(FsWindow* window);
 
 /**
- * @brief Checks Key Just Pressed.
- * 
- * Checks if key has just pressed in the actual frame.
- * 
- * @retval true key just pressed.
- * @retval false key already pressed.
+ * @brief Checks if a key was just pressed.
+ *
+ * Returns true if the key transitioned from released to pressed
+ * during the current frame.
+ *
+ * @param key Key to query.
+ *
+ * @retval true  Key was just pressed.
+ * @retval false Key was not just pressed.
  */
 bool fsIsKeyJustPressed(FsKey key);
 
 /**
- * @brief Checks Key Just Released.
- * 
- * Checks if key has just released in the actual frame.
- * 
- * @retval true key just released.
- * @retval false key already released.
+ * @brief Checks if a key was just released.
+ *
+ * Returns true if the key transitioned from pressed to released
+ * during the current frame.
+ *
+ * @param key Key to query.
+ *
+ * @retval true  Key was just released.
+ * @retval false Key was not just released.
  */
 bool fsIsKeyJustReleased(FsKey key);
 
 /**
- * @brief Checks Key Down.
- * 
- * Checks if key is down.
- * 
- * @retval true key down.
- * @retval false key up.
+ * @brief Checks if a key is currently pressed.
+ *
+ * @param key Key to query.
+ *
+ * @retval true  Key is pressed.
+ * @retval false Key is not pressed.
  */
 bool fsIsKeyDown(FsKey key);
 
 /**
- * @brief Checks Key Down.
- * 
- * Checks if key is down.
- * 
- * @retval true key up.
- * @retval false key down.
+ * @brief Checks if a key is currently released.
+ *
+ * @param key Key to query.
+ *
+ * @retval true  Key is released.
+ * @retval false Key is not released.
  */
 bool fsIsKeyUp(FsKey key);
 

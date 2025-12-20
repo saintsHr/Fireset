@@ -92,24 +92,28 @@ $(function(){initNavTree('group__Window.html','',''); });
   <div class="headertitle"><div class="title">Window </div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Window management functions and types.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:FsWindow" id="r_FsWindow"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsWindow.html">FsWindow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window struct.  <a href="structFsWindow.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window object.  <a href="structFsWindow.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga6a82d805cad914a2dd446e66cb3469ca" id="r_ga6a82d805cad914a2dd446e66cb3469ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsWindow.html">FsWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6a82d805cad914a2dd446e66cb3469ca">fsCreateWindow</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
 <tr class="memdesc:ga6a82d805cad914a2dd446e66cb3469ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window.  <br /></td></tr>
 <tr class="memitem:ga97a335d2e3ae69bd3fb850037d3c6f7f" id="r_ga97a335d2e3ae69bd3fb850037d3c6f7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga97a335d2e3ae69bd3fb850037d3c6f7f">fsHandleWindow</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
-<tr class="memdesc:ga97a335d2e3ae69bd3fb850037d3c6f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window handler.  <br /></td></tr>
+<tr class="memdesc:ga97a335d2e3ae69bd3fb850037d3c6f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates a window.  <br /></td></tr>
 <tr class="memitem:gaa1830e4996a8f32d33bf6196ba4115b9" id="r_gaa1830e4996a8f32d33bf6196ba4115b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa1830e4996a8f32d33bf6196ba4115b9">fsDestroyWindow</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
-<tr class="memdesc:gaa1830e4996a8f32d33bf6196ba4115b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a Window.  <br /></td></tr>
+<tr class="memdesc:gaa1830e4996a8f32d33bf6196ba4115b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a window.  <br /></td></tr>
 <tr class="memitem:gaac42f2b483ab082ab8bce722f4f33be0" id="r_gaac42f2b483ab082ab8bce722f4f33be0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
-<tr class="memdesc:gaac42f2b483ab082ab8bce722f4f33be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if window should close.  <br /></td></tr>
+<tr class="memdesc:gaac42f2b483ab082ab8bce722f4f33be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a window should close.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<p>Window management functions and types. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ga6a82d805cad914a2dd446e66cb3469ca" name="ga6a82d805cad914a2dd446e66cb3469ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6a82d805cad914a2dd446e66cb3469ca">&#9670;&#160;</a></span>fsCreateWindow()</h2>
@@ -127,13 +131,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a window. </p>
-<p>Uses window data to create and setup an window.</p>
+<p>Initializes a window using the provided data.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">window</td><td>Window struct, used as data to create a window. </td></tr>
+    <tr><td class="paramname">window</td><td>Pointer to a <a class="el" href="structFsWindow.html" title="Window object.">FsWindow</a> struct containing the desired parameters. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the created window (same as input). </dd></dl>
 
 </div>
 </div>
@@ -152,8 +157,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroys a Window. </p>
-<p>Function used to destroy and close an window.</p>
+<p>Destroys a window. </p>
+<p>Closes the window and releases its resources.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">window</td><td>Window to destroy. </td></tr>
@@ -178,11 +183,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Window handler. </p>
-<p>Function used to keep a window open and updated.</p>
+<p>Updates a window. </p>
+<p>Processes events and updates the internal state of the window.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">window</td><td>Window to handle. </td></tr>
+    <tr><td class="paramname">window</td><td>Window to update. </td></tr>
   </table>
   </dd>
 </dl>
@@ -204,14 +209,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if window should close. </p>
-<p>Function used check if a provided window should close.</p>
+<p>Checks if a window should close. </p>
+<p>Queries the window to determine if a close request has been issued.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">window</td><td>Window to check. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the window should close, false otherwise. </dd></dl>
 
 </div>
 </div>

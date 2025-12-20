@@ -92,21 +92,24 @@ $(function(){initNavTree('group__Render.html','',''); });
   <div class="headertitle"><div class="title">Render </div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Basic 2D rendering primitives.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:FsColor" id="r_FsColor"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsColor.html">FsColor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents Color.  <a href="structFsColor.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB color representation.  <a href="structFsColor.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FsQuad" id="r_FsQuad"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsQuad.html">FsQuad</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents Quads.  <a href="structFsQuad.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quadrilateral primitive.  <a href="structFsQuad.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FsTriangle" id="r_FsTriangle"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsTriangle.html">FsTriangle</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents Triangles.  <a href="structFsTriangle.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangle primitive.  <a href="structFsTriangle.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FsPoint" id="r_FsPoint"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsPoint.html">FsPoint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents Point.  <a href="structFsPoint.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point primitive.  <a href="structFsPoint.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FsCircle" id="r_FsCircle"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsCircle.html">FsCircle</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a Circle.  <a href="structFsCircle.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Circle primitive.  <a href="structFsCircle.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FsLine" id="r_FsLine"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsLine.html">FsLine</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents Lines.  <a href="structFsLine.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line primitive.  <a href="structFsLine.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -121,12 +124,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6444b87e85d616465bec51460cd36815" id="r_ga6444b87e85d616465bec51460cd36815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6444b87e85d616465bec51460cd36815">fsDrawCircle</a> (const <a class="el" href="structFsCircle.html">FsCircle</a> *circle)</td></tr>
 <tr class="memdesc:ga6444b87e85d616465bec51460cd36815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a circle.  <br /></td></tr>
 <tr class="memitem:gace0c9b4e9b9348ad865172f53e794c8c" id="r_gace0c9b4e9b9348ad865172f53e794c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gace0c9b4e9b9348ad865172f53e794c8c">fsSetOrtho</a> (int width, int height)</td></tr>
-<tr class="memdesc:gace0c9b4e9b9348ad865172f53e794c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets ortographic view.  <br /></td></tr>
+<tr class="memdesc:gace0c9b4e9b9348ad865172f53e794c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the orthographic projection.  <br /></td></tr>
 <tr class="memitem:ga4ba69393b31d27cd62ab990395acff8a" id="r_ga4ba69393b31d27cd62ab990395acff8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a> (<a class="el" href="structFsColor.html">FsColor</a> color)</td></tr>
 <tr class="memdesc:ga4ba69393b31d27cd62ab990395acff8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the window.  <br /></td></tr>
-<tr class="memitem:ga345e52940132a847118a4d69a9be06cf" id="r_ga345e52940132a847118a4d69a9be06cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsColor.html">FsColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga345e52940132a847118a4d69a9be06cf">FsColor_new</a> (float r, float g, float b)</td></tr>
+<tr class="memitem:gafde4c61111eb8ae8bf12d4066a488dd0" id="r_gafde4c61111eb8ae8bf12d4066a488dd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsColor.html">FsColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafde4c61111eb8ae8bf12d4066a488dd0">FsColor_new</a> (uint8_t r, uint8_t g, uint8_t b)</td></tr>
+<tr class="memdesc:gafde4c61111eb8ae8bf12d4066a488dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<p>Basic 2D rendering primitives. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ga4ba69393b31d27cd62ab990395acff8a" name="ga4ba69393b31d27cd62ab990395acff8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4ba69393b31d27cd62ab990395acff8a">&#9670;&#160;</a></span>fsClear()</h2>
@@ -144,18 +149,18 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clears the window. </p>
-<p>Clears the window &amp; OpenGL context, removing any rendering done.</p>
+<p>Clears the window and the OpenGL context using the specified color.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">color</td><td>The color used to clear the window. </td></tr>
+    <tr><td class="paramname">color</td><td>Clear color. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ga345e52940132a847118a4d69a9be06cf" name="ga345e52940132a847118a4d69a9be06cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga345e52940132a847118a4d69a9be06cf">&#9670;&#160;</a></span>FsColor_new()</h2>
+<a id="gafde4c61111eb8ae8bf12d4066a488dd0" name="gafde4c61111eb8ae8bf12d4066a488dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafde4c61111eb8ae8bf12d4066a488dd0">&#9670;&#160;</a></span>FsColor_new()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,20 +168,31 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structFsColor.html">FsColor</a> FsColor_new </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Red component (0-255). </td></tr>
+    <tr><td class="paramname">g</td><td>Green component (0-255). </td></tr>
+    <tr><td class="paramname">b</td><td>Blue component (0-255).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Resulting color. </dd></dl>
 
 </div>
 </div>
@@ -196,10 +212,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a circle. </p>
-<p>Draws a colored circle on the window.</p>
+<p>Draws a colored circle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">circle</td><td>Object to draw. </td></tr>
+    <tr><td class="paramname">circle</td><td>Circle to draw. </td></tr>
   </table>
   </dd>
 </dl>
@@ -222,10 +238,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a line. </p>
-<p>Draws a colored line between 2 points on the window.</p>
+<p>Draws a colored line using the provided line parameters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">line</td><td>Object to draw. </td></tr>
+    <tr><td class="paramname">line</td><td>Line to draw. </td></tr>
   </table>
   </dd>
 </dl>
@@ -248,10 +264,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a pixel. </p>
-<p>Draws a colored point/pixel on a specific position on the window.</p>
+<p>Draws a colored point at the specified position.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>Object to draw. </td></tr>
+    <tr><td class="paramname">p</td><td>Point to draw. </td></tr>
   </table>
   </dd>
 </dl>
@@ -274,10 +290,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a quadrilateral. </p>
-<p>Draws a colored quadrilateral on the window.</p>
+<p>Draws a colored quadrilateral.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">quad</td><td>Object to draw. </td></tr>
+    <tr><td class="paramname">quad</td><td>Quadrilateral to draw. </td></tr>
   </table>
   </dd>
 </dl>
@@ -300,10 +316,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a triangle. </p>
-<p>Draws a colored triangle on the window.</p>
+<p>Draws a colored triangle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tri</td><td>Object to draw. </td></tr>
+    <tr><td class="paramname">tri</td><td>Triangle to draw. </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,12 +345,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets ortographic view. </p>
-<p>Defines the orthographic view/rendering of the window.</p>
+<p>Sets the orthographic projection. </p>
+<p>Defines the orthographic rendering view for the current window.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">width</td><td>the width of the orthograpich view. </td></tr>
-    <tr><td class="paramname">height</td><td>the height of the orthograpich view. </td></tr>
+    <tr><td class="paramname">width</td><td>Width of the orthographic view. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the orthographic view. </td></tr>
   </table>
   </dd>
 </dl>

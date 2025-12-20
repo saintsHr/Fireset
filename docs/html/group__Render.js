@@ -36,7 +36,7 @@ var group__Render =
       [ "thickness", "structFsLine.html#a8d984c80df31daed72588b8d43da5b57", null ]
     ] ],
     [ "fsClear", "group__Render.html#ga4ba69393b31d27cd62ab990395acff8a", null ],
-    [ "FsColor_new", "group__Render.html#ga345e52940132a847118a4d69a9be06cf", null ],
+    [ "FsColor_new", "group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0", null ],
     [ "fsDrawCircle", "group__Render.html#ga6444b87e85d616465bec51460cd36815", null ],
     [ "fsDrawLine", "group__Render.html#gaaaa3c06c9e63ee46d44864271511a417", null ],
     [ "fsDrawPixel", "group__Render.html#ga1e45557551baf71485e33e6608328c14", null ],

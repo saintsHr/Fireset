@@ -92,15 +92,19 @@ $(function(){initNavTree('group__Core.html','',''); });
   <div class="headertitle"><div class="title">Core </div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Engine core lifecycle functions.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga6b6e93bb085eeb2ad8b51db7d650a5d3" id="r_ga6b6e93bb085eeb2ad8b51db7d650a5d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a> (void)</td></tr>
-<tr class="memdesc:ga6b6e93bb085eeb2ad8b51db7d650a5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine, should be called on the very start of the program, before using the engine.  <br /></td></tr>
+<tr class="memdesc:ga6b6e93bb085eeb2ad8b51db7d650a5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the Fireset engine core.  <br /></td></tr>
 <tr class="memitem:ga3a12b515c5a4d2514cfb07014dbfa3eb" id="r_ga3a12b515c5a4d2514cfb07014dbfa3eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a> (void)</td></tr>
-<tr class="memdesc:ga3a12b515c5a4d2514cfb07014dbfa3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdowns the engine, should be called on the end of the program, after using the engine.  <br /></td></tr>
+<tr class="memdesc:ga3a12b515c5a4d2514cfb07014dbfa3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuts down the Fireset engine core.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<p>Engine core lifecycle functions. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ga3a12b515c5a4d2514cfb07014dbfa3eb" name="ga3a12b515c5a4d2514cfb07014dbfa3eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3a12b515c5a4d2514cfb07014dbfa3eb">&#9670;&#160;</a></span>fsExit()</h2>
@@ -117,7 +121,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shutdowns the engine, should be called on the end of the program, after using the engine. </p>
+<p>Shuts down the Fireset engine core. </p>
+<p>Releases all internal resources and shuts down third-party systems initialized by <a class="el" href="#ga6b6e93bb085eeb2ad8b51db7d650a5d3" title="Initializes the Fireset engine core.">fsInit()</a>.</p>
+<p>This function should be called once, at the very end of the program, after all engine usage has finished.</p>
+<dl class="section note"><dt>Note</dt><dd>After calling this function, no Fireset API function is valid. </dd></dl>
 
 </div>
 </div>
@@ -136,14 +143,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the engine, should be called on the very start of the program, before using the engine. </p>
+<p>Initializes the Fireset engine core. </p>
+<p>This function must be called exactly once, at the very beginning of the program, before calling any other Fireset API function.</p>
+<p>It initializes internal engine state and third-party dependencies such as the windowing system.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>success, engine initialized </td></tr>
-    <tr><td class="paramname">false</td><td>failed, engine not initialized </td></tr>
+    <tr><td class="paramname">true</td><td>Engine initialized successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>Initialization failed. No other Fireset function is safe to call.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this function more than once results in undefined behavior. </dd></dl>
 
 </div>
 </div>

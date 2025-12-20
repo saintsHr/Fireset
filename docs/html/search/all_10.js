@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['thickness_0',['thickness',['../structFsLine.html#a8d984c80df31daed72588b8d43da5b57',1,'FsLine']]],
-  ['time_1',['Time',['../group__Time.html',1,'']]]
+  ['width_0',['width',['../structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff',1,'FsWindow']]],
+  ['window_1',['Window',['../group__Window.html',1,'']]]
 ];

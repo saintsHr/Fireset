@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['g_0',['g',['../structFsColor.html#ad5d0cfc3db8cc351ecd80db8e6ba9fb7',1,'FsColor']]]
+  ['handle_0',['handle',['../structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c',1,'FsWindow']]],
+  ['height_1',['height',['../structFsWindow.html#a5b46126d043bab9134690e0192235d58',1,'FsWindow']]]
 ];

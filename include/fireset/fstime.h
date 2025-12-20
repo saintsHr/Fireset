@@ -1,29 +1,40 @@
+// Copyright (c) 2025 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Repo: https://github.com/saintsHr/Fireset
+
 #pragma once
 
 /** 
- * @defgroup Time
+ * @defgroup Time Time
+ * @brief Time-related functions.
  * @{
  */
 
 /**
- * @brief Gets time.
- * 
- * Gets the real system time on the function call.
-*/
+ * @brief Returns the current system time.
+ *
+ * Returns the current system time at the moment this function is called.
+ *
+ * @return Current system time.
+ */
 double fsGetSystemTime(void);
 
 /**
- * @brief Gets delta time.
- * 
- * Gets the delta time on the function call.
-*/
+ * @brief Returns the delta time.
+ *
+ * Returns the time difference between the current frame and the previous one.
+ *
+ * @return Delta time.
+ */
 double fsGetDeltaTime(void);
 
 /**
- * @brief Inits time module.
- * 
- * Initializes the time module of the engine.
-*/
+ * @brief Initializes the time module.
+ *
+ * Initializes the internal time tracking used by the engine.
+ *
+ * This function must be called before using any other time-related function.
+ */
 void fsTimeInit(void);
 
 /** @} */

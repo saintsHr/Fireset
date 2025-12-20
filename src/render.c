@@ -132,6 +132,6 @@ void fsSetOrtho(int width, int height){
     glLoadIdentity();
 }
 
-FsColor FsColor_new(float r, float g, float b){
+FsColor FsColor_new(uint8_t r, uint8_t g, uint8_t b){
     return (FsColor){r, g, b};
 }

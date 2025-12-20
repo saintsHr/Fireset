@@ -26,7 +26,10 @@ var NAVTREE =
 [
   [ "Fireset", "index.html", [
     [ "Introduction", "index.html#Introduction", null ],
-    [ "Installing", "index.html#Installing", null ],
+    [ "Installing", "index.html#Installing", [
+      [ "Debian", "index.html#Debian", null ],
+      [ "Manual", "index.html#Manual", null ]
+    ] ],
     [ "Compiling", "index.html#Compiling", null ],
     [ "Quickstart", "index.html#Quickstart", null ],
     [ "Topics", "topics.html", "topics" ],

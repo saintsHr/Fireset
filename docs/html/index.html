@@ -93,137 +93,117 @@ $(function(){initNavTree('index.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><hr  />
-<div style="float:left; margin-right:20px;"> <img src="logo.png" alt="" width="130" class="inline"/> </div><h1 class="doxsection"><a class="anchor" id="Introduction"></a>
+<div style="float:left; margin-right:20px;"> <img src="logo.png" alt="" width="150" class="inline"/> </div><h1 class="doxsection"><a class="anchor" id="Introduction"></a>
 Introduction</h1>
-<p><b>Fireset</b> is a game engine written in <b>C</b>, its main propouse is to make game <br  />
- development more <b>enjoyable</b> and <b>easy</b>, and also give your games that old feel <br  />
- we all love, in this documentation you have all functions, types and structs <br  />
- documented <b>in detail</b> and as well some <b>step by step</b> guides!</p>
+<p><b>Fireset</b> is a game engine written in <b>C</b>.</p>
+<p>Its main purpose is to make game development more <b>approachable</b> while preserving a classic, old-school rendering style.</p>
+<p>This documentation describes all public functions, types, and structures provided by the engine, as well as practical guides for getting started.</p>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="Installing"></a>
 Installing</h1>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Debian:</h3>
+<h2 class="doxsection"><a class="anchor" id="Debian"></a>
+Debian</h2>
 <ul>
-<li>go to <a href="https://github.com/saintsHr/Fireset">https://github.com/saintsHr/Fireset</a></li>
-<li>go to Releases tab and install the latest stable release</li>
-<li>install your .deb: <div class="fragment"><div class="line">sudo apt install ./fireset-dev.deb</div>
+<li>Go to the Fireset repository on GitHub.</li>
+<li>Open the <b>Releases</b> tab and download the latest stable version.</li>
+<li>Install the <span class="tt">.deb</span> package: <div class="fragment"><div class="line">sudo apt install ./fireset-dev.deb</div>
 </div><!-- fragment --></li>
-<li>now use those flags in your compilation: <div class="fragment"><div class="line">-Ifireset -lfireset -lglfw -lGL -lm</div>
-</div><!-- fragment --> or: <div class="fragment"><div class="line">$(pkg-config --cflags --libs fireset)</div>
+<li>Compile your project using: <div class="fragment"><div class="line">-Ifireset -lfireset -lglfw -lGL -lm</div>
+</div><!-- fragment --> or, preferably: <div class="fragment"><div class="line">$(pkg-config --cflags --libs fireset)</div>
 </div><!-- fragment --></li>
-<li>and this line in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
+<li>Include Fireset in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
 </div><!-- fragment --></li>
-<li>done, now you're ready to go!</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-Manual:</h3>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="Manual"></a>
+Manual</h2>
 <ul>
-<li>go to <a href="https://github.com/saintsHr/Fireset">https://github.com/saintsHr/Fireset</a></li>
-<li>go to Releases tab and install the latest stable release</li>
-<li>extract your .zip</li>
-<li>now you should see the folder <b>lib</b> and also <b>include</b></li>
-<li>move those to any place you like</li>
-<li>now use those flags in your compilation: <div class="fragment"><div class="line">-Lpath/to/lib/folder -lfireset -lglfw -lGL -lm -Ipath/to/include/folder</div>
+<li>Go to the Fireset repository on GitHub.</li>
+<li>Open the <b>Releases</b> tab and download the latest stable version.</li>
+<li>Extract the <span class="tt">.zip</span> archive.</li>
+<li>You should see the <b>lib</b> and <b>include</b> directories.</li>
+<li>Move them to any location of your choice.</li>
+<li>Compile your project using: <div class="fragment"><div class="line">-Lpath/to/lib -lfireset -lglfw -lGL -lm -Ipath/to/include</div>
 </div><!-- fragment --></li>
-<li>if you get any linking errors related to OpenGL or GLFW, make sure you have it installed and also add a "-L" flag for those</li>
-<li>and this line in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
+<li>If you encounter OpenGL or GLFW linker errors, ensure the libraries are installed and that the appropriate <span class="tt">-L</span> flags are provided.</li>
+<li>Include Fireset in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
 </div><!-- fragment --></li>
-<li>done, now you're ready to go!</li>
 </ul>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="Compiling"></a>
 Compiling</h1>
-<p>This guide is for those who want to compile the engine by hand, we do not recommend <br  />
- doing this for normal usage, anyways, heres the step-by-step guide:</p><ul>
+<p>This section is intended for users who want to build the engine manually. This is <b>not recommended</b> for regular engine usage.</p>
+<p>Steps:</p><ul>
 <li>Install the dependencies:<ul>
-<li>OpenGL Immediate Mode (3.3 or less)</li>
+<li>OpenGL (Immediate Mode, version 3.3 or lower)</li>
 <li>GLFW</li>
 </ul>
 </li>
-<li>Go to <a href="https://github.com/saintsHr/Fireset">https://github.com/saintsHr/Fireset</a></li>
-<li>Press de "Code" button</li>
-<li>Click "Download ZIP"</li>
-<li>Extract it</li>
-<li>Now you should see some folders, like:<ul>
-<li><b>src</b>, source files (.c)</li>
-<li><b>include</b>, header files (.h)</li>
-<li>etc.</li>
+<li>Download the source code from the Fireset GitHub repository.</li>
+<li>Extract the archive.</li>
+<li>Open a terminal in the project root directory.</li>
+<li>To build a debug version: <div class="fragment"><div class="line">make</div>
+</div><!-- fragment --></li>
+<li>To build a release version: <div class="fragment"><div class="line">make release</div>
+</div><!-- fragment --></li>
+<li>To generate the documentation: <div class="fragment"><div class="line">make doc</div>
+</div><!-- fragment --></li>
+<li>To generate the <span class="tt">.deb</span> package: <div class="fragment"><div class="line">make deb</div>
+</div><!-- fragment --></li>
+<li>To clean build artifacts: <div class="fragment"><div class="line">make clean</div>
+</div><!-- fragment --></li>
 </ul>
-</li>
-<li>Open your terminal in that folder</li>
-<li>for a debug version, run: <div class="fragment"><div class="line">make</div>
-</div><!-- fragment --></li>
-<li>for a release version, run: <div class="fragment"><div class="line">make release</div>
-</div><!-- fragment --></li>
-<li>to compile the docs, run: <div class="fragment"><div class="line">make doc</div>
-</div><!-- fragment --></li>
-<li>to compile the .deb, run: <div class="fragment"><div class="line">make deb</div>
-</div><!-- fragment --></li>
-<li>to remove build files, run: <div class="fragment"><div class="line">make clean</div>
-</div><!-- fragment --></li>
-<li>now you should see 3 extra folders: <br  />
-<ul>
-<li><b>bin</b>: contains the test executable <br  />
-</li>
-<li><b>build</b>: contains the object (.o) and dependencies files (.d) <br  />
-</li>
-<li><b>lib</b>: contains the compiled engine (.a)</li>
-</ul>
-</li>
-<li>done, you have compiled the engine!</li>
+<p>After compilation, the following directories will be created:</p><ul>
+<li><b>bin</b>: test executables</li>
+<li><b>build</b>: object (<span class="tt">.o</span>) and dependency (<span class="tt">.d</span>) files</li>
+<li><b>lib</b>: compiled static library (<span class="tt">.a</span>)</li>
 </ul>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="Quickstart"></a>
 Quickstart</h1>
-<p>This guide is for those who want to have a window as fast as possible, <br  />
- or for those who want to take a quick look on the API ,so heres a simple example:</p>
+<p>This example demonstrates the minimum setup required to create a window and run a basic application loop using Fireset.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>){</div>
-<div class="line">    <span class="comment">// inits engine</span></div>
 <div class="line">    <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a>()) <span class="keywordflow">return</span> 1;</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">// creates window</span></div>
 <div class="line">    <a class="code hl_struct" href="structFsWindow.html">FsWindow</a> window;</div>
 <div class="line">    window.<a class="code hl_variable" href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">width</a> = 800;</div>
 <div class="line">    window.<a class="code hl_variable" href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">height</a> = 600;</div>
 <div class="line">    window.<a class="code hl_variable" href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">name</a> = <span class="stringliteral">&quot;Example Game&quot;</span>;</div>
 <div class="line">    <a class="code hl_function" href="group__Window.html#ga6a82d805cad914a2dd446e66cb3469ca">fsCreateWindow</a>(&amp;window);</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">// main loop</span></div>
 <div class="line">    <span class="keywordflow">while</span> (!<a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(window)){</div>
 <div class="line">        <a class="code hl_function" href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a>((<a class="code hl_struct" href="structFsColor.html">FsColor</a>){0, 0, 0});</div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">// render here</span></div>
+<div class="line">        <span class="comment">// rendering code</span></div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_function" href="group__Window.html#ga97a335d2e3ae69bd3fb850037d3c6f7f">fsHandleWindow</a>(&amp;window);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">// destroy window and closes engine</span></div>
 <div class="line">    <a class="code hl_function" href="group__Window.html#gaa1830e4996a8f32d33bf6196ba4115b9">fsDestroyWindow</a>(&amp;window);</div>
 <div class="line">    <a class="code hl_function" href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__Core_html_ga3a12b515c5a4d2514cfb07014dbfa3eb"><div class="ttname"><a href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a></div><div class="ttdeci">void fsExit(void)</div><div class="ttdoc">Shutdowns the engine, should be called on the end of the program, after using the engine.</div><div class="ttdef"><b>Definition</b> core.c:14</div></div>
-<div class="ttc" id="agroup__Core_html_ga6b6e93bb085eeb2ad8b51db7d650a5d3"><div class="ttname"><a href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a></div><div class="ttdeci">bool fsInit(void)</div><div class="ttdoc">Initializes the engine, should be called on the very start of the program, before using the engine.</div><div class="ttdef"><b>Definition</b> core.c:8</div></div>
+<div class="ttc" id="agroup__Core_html_ga3a12b515c5a4d2514cfb07014dbfa3eb"><div class="ttname"><a href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a></div><div class="ttdeci">void fsExit(void)</div><div class="ttdoc">Shuts down the Fireset engine core.</div><div class="ttdef"><b>Definition</b> core.c:14</div></div>
+<div class="ttc" id="agroup__Core_html_ga6b6e93bb085eeb2ad8b51db7d650a5d3"><div class="ttname"><a href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a></div><div class="ttdeci">bool fsInit(void)</div><div class="ttdoc">Initializes the Fireset engine core.</div><div class="ttdef"><b>Definition</b> core.c:8</div></div>
 <div class="ttc" id="agroup__Render_html_ga4ba69393b31d27cd62ab990395acff8a"><div class="ttname"><a href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a></div><div class="ttdeci">void fsClear(FsColor color)</div><div class="ttdoc">Clears the window.</div><div class="ttdef"><b>Definition</b> render.c:116</div></div>
 <div class="ttc" id="agroup__Window_html_ga6a82d805cad914a2dd446e66cb3469ca"><div class="ttname"><a href="group__Window.html#ga6a82d805cad914a2dd446e66cb3469ca">fsCreateWindow</a></div><div class="ttdeci">FsWindow * fsCreateWindow(FsWindow *window)</div><div class="ttdoc">Creates a window.</div><div class="ttdef"><b>Definition</b> window.c:17</div></div>
-<div class="ttc" id="agroup__Window_html_ga97a335d2e3ae69bd3fb850037d3c6f7f"><div class="ttname"><a href="group__Window.html#ga97a335d2e3ae69bd3fb850037d3c6f7f">fsHandleWindow</a></div><div class="ttdeci">void fsHandleWindow(FsWindow *window)</div><div class="ttdoc">Window handler.</div><div class="ttdef"><b>Definition</b> window.c:38</div></div>
-<div class="ttc" id="agroup__Window_html_gaa1830e4996a8f32d33bf6196ba4115b9"><div class="ttname"><a href="group__Window.html#gaa1830e4996a8f32d33bf6196ba4115b9">fsDestroyWindow</a></div><div class="ttdeci">void fsDestroyWindow(FsWindow *window)</div><div class="ttdoc">Destroys a Window.</div><div class="ttdef"><b>Definition</b> window.c:45</div></div>
-<div class="ttc" id="agroup__Window_html_gaac42f2b483ab082ab8bce722f4f33be0"><div class="ttname"><a href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a></div><div class="ttdeci">bool fsWindowShouldClose(FsWindow *window)</div><div class="ttdoc">Checks if window should close.</div><div class="ttdef"><b>Definition</b> window.c:49</div></div>
-<div class="ttc" id="astructFsColor_html"><div class="ttname"><a href="structFsColor.html">FsColor</a></div><div class="ttdoc">Represents Color.</div><div class="ttdef"><b>Definition</b> render.h:23</div></div>
-<div class="ttc" id="astructFsWindow_html"><div class="ttname"><a href="structFsWindow.html">FsWindow</a></div><div class="ttdoc">Window struct.</div><div class="ttdef"><b>Definition</b> window.h:20</div></div>
-<div class="ttc" id="astructFsWindow_html_a5b46126d043bab9134690e0192235d58"><div class="ttname"><a href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">FsWindow::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> window.h:23</div></div>
-<div class="ttc" id="astructFsWindow_html_a6cc5523b876ea62bc17df2b5bbe9b3ff"><div class="ttname"><a href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">FsWindow::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> window.h:22</div></div>
-<div class="ttc" id="astructFsWindow_html_a914cc7e4c1b38b872a29ffc9af2b9470"><div class="ttname"><a href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">FsWindow::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition</b> window.h:24</div></div>
-</div><!-- fragment --><p> This code:</p><ul>
-<li>opens a window</li>
-<li>loops until you close it</li>
-<li>then shutdowns the engine</li>
+<div class="ttc" id="agroup__Window_html_ga97a335d2e3ae69bd3fb850037d3c6f7f"><div class="ttname"><a href="group__Window.html#ga97a335d2e3ae69bd3fb850037d3c6f7f">fsHandleWindow</a></div><div class="ttdeci">void fsHandleWindow(FsWindow *window)</div><div class="ttdoc">Updates a window.</div><div class="ttdef"><b>Definition</b> window.c:38</div></div>
+<div class="ttc" id="agroup__Window_html_gaa1830e4996a8f32d33bf6196ba4115b9"><div class="ttname"><a href="group__Window.html#gaa1830e4996a8f32d33bf6196ba4115b9">fsDestroyWindow</a></div><div class="ttdeci">void fsDestroyWindow(FsWindow *window)</div><div class="ttdoc">Destroys a window.</div><div class="ttdef"><b>Definition</b> window.c:45</div></div>
+<div class="ttc" id="agroup__Window_html_gaac42f2b483ab082ab8bce722f4f33be0"><div class="ttname"><a href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a></div><div class="ttdeci">bool fsWindowShouldClose(FsWindow *window)</div><div class="ttdoc">Checks if a window should close.</div><div class="ttdef"><b>Definition</b> window.c:49</div></div>
+<div class="ttc" id="astructFsColor_html"><div class="ttname"><a href="structFsColor.html">FsColor</a></div><div class="ttdoc">RGB color representation.</div><div class="ttdef"><b>Definition</b> render.h:23</div></div>
+<div class="ttc" id="astructFsWindow_html"><div class="ttname"><a href="structFsWindow.html">FsWindow</a></div><div class="ttdoc">Window object.</div><div class="ttdef"><b>Definition</b> window.h:17</div></div>
+<div class="ttc" id="astructFsWindow_html_a5b46126d043bab9134690e0192235d58"><div class="ttname"><a href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">FsWindow::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> window.h:20</div></div>
+<div class="ttc" id="astructFsWindow_html_a6cc5523b876ea62bc17df2b5bbe9b3ff"><div class="ttname"><a href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">FsWindow::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> window.h:19</div></div>
+<div class="ttc" id="astructFsWindow_html_a914cc7e4c1b38b872a29ffc9af2b9470"><div class="ttname"><a href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">FsWindow::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition</b> window.h:21</div></div>
+</div><!-- fragment --><p>This program:</p><ul>
+<li>Initializes the engine</li>
+<li>Creates a window</li>
+<li>Runs a main loop until the window is closed</li>
+<li>Shuts down the engine</li>
 </ul>
-<p>The engine can do much more than it, so take a time to explore it!</p>
-<p>Used modules:</p><ul>
+<p>Relevant modules:</p><ul>
 <li><a class="el" href="group__Core.html">Core</a></li>
 <li><a class="el" href="group__Window.html">Window</a></li>
 </ul>

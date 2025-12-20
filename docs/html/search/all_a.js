@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length_0',['length',['../structFsLine.html#ae1e2b5b942a00e36c83bfddb525f1b7b',1,'FsLine']]]
+  ['name_0',['name',['../structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470',1,'FsWindow']]]
 ];

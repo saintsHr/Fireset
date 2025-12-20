@@ -13,150 +13,145 @@
 
 /**
  * \mainpage Fireset
- * 
+ *
  * ---
- * 
+ *
  * <div style="float:left; margin-right:20px;">
- *     <img src="logo.png" width="130"/>
+ *     <img src="logo.png" width="150"/>
  * </div>
- * 
+ *
  * \section Introduction
- * **Fireset** is a game engine written in **C**, its main propouse is to make game \n
- * development more **enjoyable** and **easy**, and also give your games that old feel \n
- * we all love, in this documentation you have all functions, types and structs \n
- * documented **in detail** and as well some **step by step** guides!
- * 
+ * **Fireset** is a game engine written in **C**.
+ *
+ * Its main purpose is to make game development more **approachable** while preserving
+ * a classic, old-school rendering style.
+ *
+ * This documentation describes all public functions, types, and structures provided
+ * by the engine, as well as practical guides for getting started.
+ *
  * ---
- * 
+ *
  * \section Installing
- * ### Debian:
- * - go to https://github.com/saintsHr/Fireset
- * - go to Releases tab and install the latest stable release
- * - install your .deb:
+ *
+ * \subsection Debian
+ * - Go to the Fireset repository on GitHub.
+ * - Open the **Releases** tab and download the latest stable version.
+ * - Install the `.deb` package:
  * ```bash
  * sudo apt install ./fireset-dev.deb
  * ```
- * - now use those flags in your compilation:
+ * - Compile your project using:
  * ```bash
  * -Ifireset -lfireset -lglfw -lGL -lm
  * ```
- * or:
+ * or, preferably:
  * ```bash
  * $(pkg-config --cflags --libs fireset)
  * ```
- * - and this line in your source files:
+ * - Include Fireset in your source files:
  * ```c
  * #include <fireset/fireset.h>
  * ```
- * - done, now you're ready to go!
- * 
- * ### Manual:
- * - go to https://github.com/saintsHr/Fireset
- * - go to Releases tab and install the latest stable release
- * - extract your .zip
- * - now you should see the folder **lib** and also **include**
- * - move those to any place you like
- * - now use those flags in your compilation:
- * ```bash
- * -Lpath/to/lib/folder -lfireset -lglfw -lGL -lm -Ipath/to/include/folder
- * ```
- * - if you get any linking errors related to OpenGL or GLFW, make sure you
- * have it installed and also add a "-L" flag for those
- * - and this line in your source files:
- * ```c
- * #include <fireset/fireset.h>
- * ```
- * - done, now you're ready to go!
- * 
+ *
  * ---
- * 
+ *
+ * \subsection Manual
+ * - Go to the Fireset repository on GitHub.
+ * - Open the **Releases** tab and download the latest stable version.
+ * - Extract the `.zip` archive.
+ * - You should see the **lib** and **include** directories.
+ * - Move them to any location of your choice.
+ * - Compile your project using:
+ * ```bash
+ * -Lpath/to/lib -lfireset -lglfw -lGL -lm -Ipath/to/include
+ * ```
+ * - If you encounter OpenGL or GLFW linker errors, ensure the libraries are installed
+ *   and that the appropriate `-L` flags are provided.
+ * - Include Fireset in your source files:
+ * ```c
+ * #include <fireset/fireset.h>
+ * ```
+ *
+ * ---
+ *
  * \section Compiling
- * This guide is for those who want to compile the engine by hand,
- * we do not recommend \n doing this for normal usage, anyways, heres the
- * step-by-step guide:
+ * This section is intended for users who want to build the engine manually.
+ * This is **not recommended** for regular engine usage.
+ *
+ * Steps:
  * - Install the dependencies:
- *  - OpenGL Immediate Mode (3.3 or less)
+ *  - OpenGL (Immediate Mode, version 3.3 or lower)
  *  - GLFW
- * - Go to https://github.com/saintsHr/Fireset
- * - Press de "Code" button
- * - Click "Download ZIP"
- * - Extract it
- * - Now you should see some folders, like:
- *  - **src**, source files (.c)
- *  - **include**, header files (.h)
- *  - etc.
- * - Open your terminal in that folder
- * - for a debug version, run:
+ * - Download the source code from the Fireset GitHub repository.
+ * - Extract the archive.
+ * - Open a terminal in the project root directory.
+ * - To build a debug version:
  * ```bash
  * make
  * ```
- * - for a release version, run:
+ * - To build a release version:
  * ```bash
  * make release
  * ```
- * - to compile the docs, run:
+ * - To generate the documentation:
  * ```bash
  * make doc
  * ```
- * - to compile the .deb, run:
+ * - To generate the `.deb` package:
  * ```bash
  * make deb
  * ```
- * - to remove build files, run:
+ * - To clean build artifacts:
  * ```bash
  * make clean
  * ```
- * - now you should see 3 extra folders: \n
- *  - **bin**: contains the test executable \n
- *  - **build**: contains the object (.o) and dependencies files (.d) \n
- *  - **lib**: contains the compiled engine (.a)
- * - done, you have compiled the engine!
- * 
- * ---
- * 
- * \section Quickstart
- * This guide is for those who want to have a window as fast as possible, \n
- * or for those who want to take a quick look on the API ,so heres a simple example:
- * 
- * ```c
- *  #include <fireset/fireset.h>
  *
- *  int main(void){
- *      // inits engine
- *      if (!fsInit()) return 1;
- * 
- *      // creates window
- *      FsWindow window;
- *      window.width = 800;
- *      window.height = 600;
- *      window.name = "Example Game";
- *      fsCreateWindow(&window);
- * 
- *      // main loop
- *      while (!fsWindowShouldClose(window)){
- *          fsClear((FsColor){0, 0, 0});
- * 
- *          // render here
- * 
- *          fsHandleWindow(&window);
- *      }
- * 
- *      // destroy window and closes engine
- *      fsDestroyWindow(&window);
- *      fsExit();
- *      return 0;
- *  }
+ * After compilation, the following directories will be created:
+ * - **bin**: test executables
+ * - **build**: object (`.o`) and dependency (`.d`) files
+ * - **lib**: compiled static library (`.a`)
+ *
+ * ---
+ *
+ * \section Quickstart
+ * This example demonstrates the minimum setup required to create a window
+ * and run a basic application loop using Fireset.
+ *
+ * ```c
+ * #include <fireset/fireset.h>
+ *
+ * int main(void){
+ *     if (!fsInit()) return 1;
+ *
+ *     FsWindow window;
+ *     window.width = 800;
+ *     window.height = 600;
+ *     window.name = "Example Game";
+ *     fsCreateWindow(&window);
+ *
+ *     while (!fsWindowShouldClose(window)){
+ *         fsClear((FsColor){0, 0, 0});
+ *
+ *         // rendering code
+ *
+ *         fsHandleWindow(&window);
+ *     }
+ *
+ *     fsDestroyWindow(&window);
+ *     fsExit();
+ *     return 0;
+ * }
  * ```
- * This code:
- * - opens a window
- * - loops until you close it
- * - then shutdowns the engine
- * 
- * The engine can do much more than it, so take a time to explore it!
- * 
- * Used modules:
+ *
+ * This program:
+ * - Initializes the engine
+ * - Creates a window
+ * - Runs a main loop until the window is closed
+ * - Shuts down the engine
+ *
+ * Relevant modules:
  * - \ref Core
- * - \ref Window 
- * 
+ * - \ref Window
+ *
  * ---
  */

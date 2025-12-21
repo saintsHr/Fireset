@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fireset: include/fireset/fireset.h Source File</title>
+<title>Fireset: FsSpace Struct Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('fireset_8h_source.html','',''); });
+$(function(){initNavTree('structFsSpace.html','','structFsSpace-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,30 +89,73 @@ $(function(){initNavTree('fireset_8h_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">fireset.h</div></div>
+  <div class="headertitle"><div class="title">FsSpace Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2025 Henrique Rodrigues Santos</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Licensed under the MIT License</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Repo: https://github.com/saintsHr/Fireset</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;fireset/window.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;fireset/core.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;fireset/render.h&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;fireset/vertex.h&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;fireset/fstime.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;fireset/input.h&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;fireset/physics.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="physics_8h_source.html">physics.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for FsSpace:</div>
+<div class="dyncontent">
+<div class="center"><img src="structFsSpace__coll__graph.png" border="0" usemap="#aFsSpace_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aFsSpace_coll__map" id="aFsSpace_coll__map">
+<area shape="rect" title=" " alt="" coords="5,106,81,134"/>
+<area shape="rect" href="structFsVec2.html" title="2D vector." alt="" coords="9,5,77,33"/>
+<area shape="poly" title=" " alt="" coords="45,47,46,106,40,105,41,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3364fd92236aaccf22e540f0d72a65ed" id="r_a3364fd92236aaccf22e540f0d72a65ed"><td class="memItemLeft" align="right" valign="top">cpSpace *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3364fd92236aaccf22e540f0d72a65ed">raw</a></td></tr>
+<tr class="memitem:a0ddf00fa7e172a0ffa8fbcaa62660597" id="r_a0ddf00fa7e172a0ffa8fbcaa62660597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf00fa7e172a0ffa8fbcaa62660597">gravity</a></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a0ddf00fa7e172a0ffa8fbcaa62660597" name="a0ddf00fa7e172a0ffa8fbcaa62660597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf00fa7e172a0ffa8fbcaa62660597">&#9670;&#160;</a></span>gravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structFsVec2.html">FsVec2</a> FsSpace::gravity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3364fd92236aaccf22e540f0d72a65ed" name="a3364fd92236aaccf22e540f0d72a65ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3364fd92236aaccf22e540f0d72a65ed">&#9670;&#160;</a></span>raw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cpSpace* FsSpace::raw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/fireset/<a class="el" href="physics_8h_source.html">physics.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_258788930f237705a65652cd224641a5.html">fireset</a></li><li class="navelem"><b>fireset.h</b></li>
+    <li class="navelem"><a href="structFsSpace.html">FsSpace</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

@@ -115,11 +115,12 @@ var searchData=
   ['fspoint_112',['FsPoint',['../structFsPoint.html',1,'']]],
   ['fsquad_113',['FsQuad',['../structFsQuad.html',1,'']]],
   ['fssetortho_114',['fsSetOrtho',['../group__Render.html#gace0c9b4e9b9348ad865172f53e794c8c',1,'fsSetOrtho(int width, int height):&#160;render.c'],['../group__Render.html#gace0c9b4e9b9348ad865172f53e794c8c',1,'fsSetOrtho(int width, int height):&#160;render.c']]],
-  ['fstimeinit_115',['fsTimeInit',['../group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68',1,'fsTimeInit(void):&#160;fstime.c'],['../group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68',1,'fsTimeInit(void):&#160;fstime.c']]],
-  ['fstriangle_116',['FsTriangle',['../structFsTriangle.html',1,'']]],
-  ['fsupdateinput_117',['fsUpdateInput',['../group__Input.html#gab2ec7699a88cd5106b04d55df99fccec',1,'fsUpdateInput(FsWindow *window):&#160;input.c'],['../group__Input.html#gab2ec7699a88cd5106b04d55df99fccec',1,'fsUpdateInput(FsWindow *window):&#160;input.c']]],
-  ['fsvec2_118',['FsVec2',['../structFsVec2.html',1,'']]],
-  ['fsvec2_5fnew_119',['FsVec2_new',['../group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e',1,'FsVec2_new(float x, float y):&#160;vertex.c'],['../group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e',1,'FsVec2_new(float x, float y):&#160;vertex.c']]],
-  ['fswindow_120',['FsWindow',['../structFsWindow.html',1,'']]],
-  ['fswindowshouldclose_121',['fsWindowShouldClose',['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c'],['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c']]]
+  ['fsspace_115',['FsSpace',['../structFsSpace.html',1,'']]],
+  ['fstimeinit_116',['fsTimeInit',['../group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68',1,'fsTimeInit(void):&#160;fstime.c'],['../group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68',1,'fsTimeInit(void):&#160;fstime.c']]],
+  ['fstriangle_117',['FsTriangle',['../structFsTriangle.html',1,'']]],
+  ['fsupdateinput_118',['fsUpdateInput',['../group__Input.html#gab2ec7699a88cd5106b04d55df99fccec',1,'fsUpdateInput(FsWindow *window):&#160;input.c'],['../group__Input.html#gab2ec7699a88cd5106b04d55df99fccec',1,'fsUpdateInput(FsWindow *window):&#160;input.c']]],
+  ['fsvec2_119',['FsVec2',['../structFsVec2.html',1,'']]],
+  ['fsvec2_5fnew_120',['FsVec2_new',['../group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e',1,'FsVec2_new(float x, float y):&#160;vertex.c'],['../group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e',1,'FsVec2_new(float x, float y):&#160;vertex.c']]],
+  ['fswindow_121',['FsWindow',['../structFsWindow.html',1,'']]],
+  ['fswindowshouldclose_122',['fsWindowShouldClose',['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c'],['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c']]]
 ];

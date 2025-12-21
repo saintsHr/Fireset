@@ -155,6 +155,9 @@ var NAVTREEINDEX0 =
 "structFsQuad.html#a3061a281282713ca2e167f956866c004":[4,3,1,2],
 "structFsQuad.html#a8c488482658a50bff31d1bde8aae1ecb":[4,3,1,1],
 "structFsQuad.html#aa8680b9a04a3315633abcc6de17c43bd":[4,3,1,3],
+"structFsSpace.html":[5,0,5],
+"structFsSpace.html#a0ddf00fa7e172a0ffa8fbcaa62660597":[5,0,5,0],
+"structFsSpace.html#a3364fd92236aaccf22e540f0d72a65ed":[5,0,5,1],
 "structFsTriangle.html":[4,3,2],
 "structFsTriangle.html#a24dea77d61e5c29b2b21ccdfce7a3d8d":[4,3,2,3],
 "structFsTriangle.html#a5b5e3fb571a1b486d6d4a38f81e3bb8b":[4,3,2,1],
@@ -168,9 +171,9 @@ var NAVTREEINDEX0 =
 "structFsWindow.html#a5b46126d043bab9134690e0192235d58":[4,5,0,1],
 "structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff":[4,5,0,3],
 "structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470":[4,5,0,2],
-"structKeyState.html":[5,0,8],
-"structKeyState.html#a0fe5114153def6580a2777ea0124692b":[5,0,8,1],
-"structKeyState.html#a58a41710d0b4407897d4ca5f253bb14a":[5,0,8,2],
-"structKeyState.html#aaedef9ae31e98e1b91643b47f79479d5":[5,0,8,0],
+"structKeyState.html":[5,0,9],
+"structKeyState.html#a0fe5114153def6580a2777ea0124692b":[5,0,9,1],
+"structKeyState.html#a58a41710d0b4407897d4ca5f253bb14a":[5,0,9,2],
+"structKeyState.html#aaedef9ae31e98e1b91643b47f79479d5":[5,0,9,0],
 "topics.html":[4]
 };

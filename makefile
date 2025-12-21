@@ -91,7 +91,7 @@ doc:
 $(TARGET).pc: $(TARGET).pc.in
 	sed -e 's|@PREFIX@|$(PREFIX)|g' \
 		-e 's|@VERSION@|$(VERSION)|g' \
-		$(TARGET).pc.in > $(BUILD_DIR)$(TARGET).pc
+		$(TARGET).pc.in > $(BUILD_DIR)/$(TARGET).pc
 
 # ====================================================
 # Installation
@@ -106,7 +106,7 @@ install: release $(TARGET).pc
 	install -m 644 $(LIB) $(DESTDIR)$(LIB_DIR)
 	# Install pkg-config file
 	install -d $(DESTDIR)$(PREFIX)/lib/pkgconfig
-	install -m 644 $(TARGET).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig/
+	install -m 644 $(BUILD_DIR)/$(TARGET).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig/
 
 # ====================================================
 # Uninstall
@@ -130,7 +130,7 @@ DOCDIR     := $(USRDIR)/share/doc/$(PKGNAME)
 PCDIR      := $(LIBDIR)/pkgconfig
 OVERRIDEDIR := $(USRDIR)/share/lintian/overrides
 
-deb:
+deb: release $(TARGET).pc
 	@set -e
 	$(RM) $(STAGE)
 	mkdir -p $(DEBIANDIR) $(LIBDIR) $(INCDIR) $(DOCDIR) $(PCDIR)
@@ -142,7 +142,7 @@ deb:
 	cp LICENSE $(DOCDIR)/
 	mkdir -p $(OVERRIDEDIR)
 	cp debian/fireset-dev.lintian-overrides $(OVERRIDEDIR)/fireset-dev
-	cp $(TARGET).pc $(PCDIR)/
+	cp $(BUILD_DIR)/$(TARGET).pc $(PCDIR)/
 	gzip -n -9 $(DOCDIR)/changelog
 	find $(STAGE) -type d -exec chmod 755 {} +
 	find $(STAGE) -type f -exec chmod 644 {} +

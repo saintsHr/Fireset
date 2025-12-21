@@ -10,6 +10,7 @@
 #include "fireset/vertex.h"
 #include "fireset/fstime.h"
 #include "fireset/input.h"
+#include "fireset/physics.h"
 
 /**
  * \mainpage Fireset

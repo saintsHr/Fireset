@@ -1,3 +1,9 @@
+fireset-dev (0.4.0) unstable; urgency=low
+
+  * Physics Module
+
+ -- Henrique <hiqkrs@gmail.com>  Sun, 21 Dec 2025 16:29:00 +0000
+
 fireset-dev (0.3.0) unstable; urgency=mid
 
   * Input Module

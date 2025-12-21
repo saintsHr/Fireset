@@ -20,7 +20,7 @@ Recurring or structural contributions to the engine.
 ## Contributors
 Individual contributions such as features, bug fixes, improvements, or documentation.
 
-- To be listed
+- [seruna-1](https://github.com/seruna-1) - Install & Uninstall makefile rules 
 
 ---
 

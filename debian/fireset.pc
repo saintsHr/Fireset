@@ -5,6 +5,6 @@ includedir=${prefix}/include
 
 Name: fireset
 Description: Fireset Engine
-Version: 0.2.0
+Version: 0.3.0
 Libs: -lfireset -lglfw -lGL -lm
 Cflags: -I${includedir}/fireset

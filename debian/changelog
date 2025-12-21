@@ -1,3 +1,11 @@
+fireset-dev (0.3.0) unstable; urgency=mid
+
+  * Input Module
+  * Constructor Functions
+  * API Changes
+
+ -- Henrique <hiqkrs@gmail.com>  Sat, 20 Dec 2025 18:22:00 +0000
+
 fireset-dev (0.2.0) unstable; urgency=mid
 
   * Added Transformations

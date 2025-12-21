@@ -97,6 +97,11 @@
  * ```bash
  * make doc
  * ```
+ * - To manually install:
+ * ```bash
+ * make install
+ * ```
+ * Note: if pkg-config cannot find this, ensure `/usr/local/pkgconfig` is present in `PKG_CONFIG_PATH` environment variable.
  * - To generate the `.deb` package:
  * ```bash
  * make deb

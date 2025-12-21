@@ -8,6 +8,13 @@
 TARGET := fireset
 
 # ====================================================
+# Paths
+# ====================================================
+PREFIX ?= /usr/local
+INCLUDE_DIR = $(PREFIX)/include/$(TARGET)
+LIB_DIR = $(PREFIX)/lib
+
+# ====================================================
 # Tools
 # ====================================================
 CC := gcc
@@ -77,6 +84,29 @@ $(BUILD_DIR)/%.o: src/%.c
 # ====================================================
 doc:
 	doxygen Doxyfile
+
+# ====================================================
+# Package configuration files (.pc)
+# ====================================================
+$(TARGET).pc: $(TARGET).pc.in
+	sed -e 's|@PREFIX@|$(PREFIX)|g' \
+		-e 's|@VERSION@|$(VERSION)|g' \
+		$(TARGET).pc.in > $(BUILD_DIR)$(TARGET).pc
+
+# ====================================================
+# Installation
+# ====================================================
+install: release $(TARGET).pc
+	# Create directories
+	install -d $(DESTDIR)$(INCLUDE_DIR)
+	install -d $(DESTDIR)$(LIB_DIR)
+	# Install headers
+	install -m 644 include/fireset/*.h $(DESTDIR)$(INCLUDE_DIR)
+	# Install binaries
+	install -m 644 $(LIB) $(DESTDIR)$(LIB_DIR)
+	# Install pkg-config file
+	install -d $(DESTDIR)$(PREFIX)/lib/pkgconfig
+	install -m 644 $(TARGET).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig/
 
 # ====================================================
 # Debian package

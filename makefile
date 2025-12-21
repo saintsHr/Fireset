@@ -109,6 +109,14 @@ install: release $(TARGET).pc
 	install -m 644 $(TARGET).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig/
 
 # ====================================================
+# Uninstall
+# ====================================================
+uninstall:
+	$(RM) $(DESTDIR)$(INCLUDE_DIR)
+	$(RM) $(DESTDIR)$(PREFIX)/$(LIB)
+	$(RM) $(DESTDIR)$(PREFIX)/lib/pkgconfig/$(TARGET).pc
+
+# ====================================================
 # Debian package
 # ====================================================
 STAGE      := fireset-dev
@@ -134,7 +142,7 @@ deb:
 	cp LICENSE $(DOCDIR)/
 	mkdir -p $(OVERRIDEDIR)
 	cp debian/fireset-dev.lintian-overrides $(OVERRIDEDIR)/fireset-dev
-	cp debian/fireset.pc $(PCDIR)/
+	cp $(TARGET).pc $(PCDIR)/
 	gzip -n -9 $(DOCDIR)/changelog
 	find $(STAGE) -type d -exec chmod 755 {} +
 	find $(STAGE) -type f -exec chmod 644 {} +

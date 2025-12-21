@@ -102,6 +102,10 @@
  * make install
  * ```
  * Note: if pkg-config cannot find this, ensure `/usr/local/pkgconfig` is present in `PKG_CONFIG_PATH` environment variable.
+ * - To uninstall what was installed with `make install`:
+ * ```bash
+ * make uninstall
+ * ```
  * - To generate the `.deb` package:
  * ```bash
  * make deb

@@ -16,6 +16,7 @@ if you find any issue or have a cool idea/suggestion, share it on github issues 
 
 ### 🚀 Features:
 - 2D Rendering
+- 2D Physics
 - Transform (Resize, Rotate, Move)
 - Window Management
 - Keyboard & Mouse Input

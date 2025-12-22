@@ -2,6 +2,8 @@
 // Licensed under the MIT License
 // Repo: https://github.com/saintsHr/Fireset
 
+#include "fireset/window.h"
+
 #pragma once
 
 /** 
@@ -29,5 +31,7 @@ typedef struct{
  * @return FsVec2 instance with specified components.
  */
 FsVec2 FsVec2_new(float x, float y);
+
+FsVec2 FsVec2_toScreen(FsVec2 vec, FsWindow* window);
 
 /** @} */

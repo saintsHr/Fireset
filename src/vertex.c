@@ -8,3 +8,8 @@
 FsVec2 FsVec2_new(float x, float y){
     return (FsVec2){x, y};
 }
+
+FsVec2 FsVec2_toScreen(FsVec2 vec, FsWindow* window){
+    FsVec2 vecn = (FsVec2){vec.x, window->height - vec.y};
+    return vecn;
+}

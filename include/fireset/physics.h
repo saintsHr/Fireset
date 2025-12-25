@@ -57,13 +57,19 @@ typedef struct{
 }FsShape;
 
 FsSpace fsSpaceCreate(FsVec2 gravity);
-FsBody fsBodyCreate(FsBodyType type, FsSpace* space);
-FsShape fsShapeCreate(FsBody* body, const FsShapeDesc* desc);
+void fsSpaceStep(FsSpace* space);
 void fsSpaceAddShape(FsSpace* space, FsShape* shape);
 void fsSpaceAddBody(FsSpace* space, FsBody* body);
+
 void fsShapeSetFriction(FsShape* shape, float friction);
+FsShape fsShapeCreate(FsBody* body, const FsShapeDesc* desc);
+FsShape fsShapeBoxCreate(FsBody* body, float width, float height, float radius);
+
+FsBody fsBodyCreate(FsBodyType type, FsSpace* space);
 void fsBodySetMoment(FsBody* body, float moment);
 void fsBodySetMass(FsBody* body, float mass);
 void fsBodySetPosition(FsBody* body, FsVec2 position);
-void fsSpaceStep(FsSpace* space);
 FsVec2 fsBodyGetPosition(FsBody* body);
+float fsBodyGetAngle(FsBody* body);
+
+float fsMomentForBox(mass, width, height);

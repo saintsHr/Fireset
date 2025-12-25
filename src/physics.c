@@ -130,3 +130,27 @@ FsVec2 fsBodyGetPosition(FsBody* body){
     FsVec2 vec = FsVec2_new(cpvec.x, cpvec.y);
     return vec;
 }
+
+float fsBodyGetAngle(FsBody* body){
+    return cpBodyGetAngle(body->raw) * (180.0f / PI);
+}
+
+FsShape fsShapeBoxCreate(FsBody* body, float width, float height, float radius){
+    FsShapeDesc desc = {
+        .type = FS_SHAPE_BOX,
+        .box = {
+            .width = width,
+            .height = height,
+            .radius = radius
+        }
+    };
+    FsShape shape = fsShapeCreate(
+        body,
+        &desc
+    );
+    return shape;
+}
+
+float fsMomentForBox(mass, width, height){
+    return cpMomentForBox(mass, width, height);
+}

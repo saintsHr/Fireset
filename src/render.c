@@ -3,9 +3,8 @@
 // Repo: https://github.com/saintsHr/Fireset
 
 #include "fireset/render.h"
+#include "settings.h"
 #include <math.h>
-
-#define PI 3.14159265359
 
 void fsDrawTriangle(const FsTriangle* tri){
     glPushMatrix();

@@ -111,6 +111,7 @@ Classes</h2></td></tr>
 <tr class="memitem:FsLine" id="r_FsLine"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsLine.html">FsLine</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line primitive.  <a href="structFsLine.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FsSprite" id="r_FsSprite"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFsSprite.html">FsSprite</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite structure.  <a href="structFsSprite.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -125,6 +126,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6444b87e85d616465bec51460cd36815" id="r_ga6444b87e85d616465bec51460cd36815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6444b87e85d616465bec51460cd36815">fsDrawCircle</a> (const <a class="el" href="structFsCircle.html">FsCircle</a> *circle)</td></tr>
 <tr class="memdesc:ga6444b87e85d616465bec51460cd36815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a circle.  <br /></td></tr>
 <tr class="memitem:ga066dce44e466ddde492cf0bb8c136632" id="r_ga066dce44e466ddde492cf0bb8c136632"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga066dce44e466ddde492cf0bb8c136632">fsDrawSprite</a> (const <a class="el" href="structFsSprite.html">FsSprite</a> *sprite)</td></tr>
+<tr class="memdesc:ga066dce44e466ddde492cf0bb8c136632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a 2D sprite.  <br /></td></tr>
 <tr class="memitem:gaabce2669ec09b0b2357420bbd54cd4ed" id="r_gaabce2669ec09b0b2357420bbd54cd4ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaabce2669ec09b0b2357420bbd54cd4ed">fsOrthoSet</a> (int width, int height)</td></tr>
 <tr class="memdesc:gaabce2669ec09b0b2357420bbd54cd4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the orthographic projection.  <br /></td></tr>
 <tr class="memitem:ga4ba69393b31d27cd62ab990395acff8a" id="r_ga4ba69393b31d27cd62ab990395acff8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a> (<a class="el" href="structFsColor.html">FsColor</a> color)</td></tr>
@@ -316,6 +318,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Draws a 2D sprite. </p>
+<p>Renders a sprite on the window using its position, size, rotation angle, and texture. The sprite is drawn as a textured quad with OpenGL.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>Pointer to the <a class="el" href="structFsSprite.html" title="Sprite structure.">FsSprite</a> to draw.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The sprite's texture must be loaded and valid. </dd>
+<dd>
+Uses OpenGL immediate mode for rendering. </dd></dl>
 
 </div>
 </div>

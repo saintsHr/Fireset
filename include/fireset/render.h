@@ -87,11 +87,16 @@ typedef struct{
     FsColor color;   /**< Color */
 }FsLine;
 
-typedef struct{
-    FsVec2 position;
-    FsVec2 size;
-    FsTexture* texture;
-    float angle;
+/**
+ * @brief Sprite structure.
+ *
+ * Represents a 2D sprite in the engine.
+ */
+typedef struct {
+    FsVec2 position;   /**< Position of the sprite in the window. */
+    FsVec2 size;       /**< Size of the sprite in the window. */
+    FsTexture* texture;/**< Pointer to the sprite's texture. */
+    float angle;       /**< Rotation angle of the sprite in degrees. */
 } FsSprite;
 
 /**
@@ -139,6 +144,17 @@ void fsDrawQuad(const FsQuad* quad);
  */
 void fsDrawCircle(const FsCircle* circle);
 
+/**
+ * @brief Draws a 2D sprite.
+ *
+ * Renders a sprite on the window using its position, size, rotation angle,
+ * and texture. The sprite is drawn as a textured quad with OpenGL.
+ *
+ * @param sprite Pointer to the FsSprite to draw.
+ *
+ * @note The sprite's texture must be loaded and valid.
+ * @note Uses OpenGL immediate mode for rendering.
+ */
 void fsDrawSprite(const FsSprite* sprite);
 
 /**

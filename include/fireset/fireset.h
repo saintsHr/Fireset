@@ -11,6 +11,7 @@
 #include "fireset/fstime.h"
 #include "fireset/input.h"
 #include "fireset/fsmath.h"
+#include "fireset/image.h"
 
 /**
  * \mainpage Fireset

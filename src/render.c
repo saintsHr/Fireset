@@ -3,7 +3,7 @@
 // Repo: https://github.com/saintsHr/Fireset
 
 #include "fireset/render.h"
-#include "settings.h"
+#include "fireset/settings.h"
 #include <math.h>
 
 void fsDrawTriangle(const FsTriangle* tri){
@@ -17,7 +17,6 @@ void fsDrawTriangle(const FsTriangle* tri){
             tri->color.g / 255.0f,
             tri->color.b / 255.0f
         );
-
         glBegin(GL_TRIANGLES);
             glVertex2f( 0.0f,    0.5f);
             glVertex2f(-0.433f, -0.25f);
@@ -81,6 +80,7 @@ void fsDrawQuad(const FsQuad* quad){
             glVertex2f(0.5f, 0.5f);
             glVertex2f(-0.5f, 0.5f);
         glEnd();
+        
     glPopMatrix();
 }
 
@@ -109,6 +109,33 @@ void fsDrawCircle(const FsCircle* circle){
                 glVertex2f(x, y);
             }
         glEnd();
+    glPopMatrix();
+}
+
+void fsDrawSprite(const FsSprite* sprite){
+    glPushMatrix();
+        glTranslatef(sprite->position.x, sprite->position.y, 0.0f);
+        glRotatef(sprite->angle, 0, 0, 1.0f);
+        glScalef(sprite->size.x, sprite->size.y, 1.0f);
+
+        glEnable(GL_TEXTURE_2D);
+        glBindTexture(GL_TEXTURE_2D, sprite->texture->id);
+
+        glBegin(GL_QUADS);
+            glTexCoord2f(0.0f, 0.0f);
+            glVertex2f(-0.5f, -0.5f);
+
+            glTexCoord2f(1.0f, 0.0f);
+            glVertex2f(0.5f, -0.5f);
+
+            glTexCoord2f(1.0f, 1.0f);
+            glVertex2f(0.5f, 0.5f);
+
+            glTexCoord2f(0.0f, 1.0f);
+            glVertex2f(-0.5f, 0.5f);
+        glEnd();
+        
+        glDisable(GL_TEXTURE_2D);
     glPopMatrix();
 }
 

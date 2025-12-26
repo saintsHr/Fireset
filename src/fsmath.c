@@ -1,4 +1,4 @@
-#include "settings.h"
+#include "fireset/settings.h"
 
 float fsDeg2Rad(float degrees){
     return degrees * (PI / 180.0f);

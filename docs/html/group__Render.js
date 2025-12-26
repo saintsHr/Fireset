@@ -35,12 +35,19 @@ var group__Render =
       [ "position", "structFsLine.html#a3bf5de7bd9d8b83b4a03af7a1652de9e", null ],
       [ "thickness", "structFsLine.html#a8d984c80df31daed72588b8d43da5b57", null ]
     ] ],
+    [ "FsSprite", "structFsSprite.html", [
+      [ "angle", "structFsSprite.html#ac37b93f3621a0886aac1cb3c9ff9961e", null ],
+      [ "position", "structFsSprite.html#a4ddfc3b1584cf4bd65faf53b8e6797af", null ],
+      [ "size", "structFsSprite.html#aa23bbf4ae3232f042a2fe04e3f74690f", null ],
+      [ "texture", "structFsSprite.html#a783ac4caa24d79f198bb8cea15494210", null ]
+    ] ],
     [ "fsClear", "group__Render.html#ga4ba69393b31d27cd62ab990395acff8a", null ],
     [ "FsColor_new", "group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0", null ],
     [ "fsDrawCircle", "group__Render.html#ga6444b87e85d616465bec51460cd36815", null ],
     [ "fsDrawLine", "group__Render.html#gaaaa3c06c9e63ee46d44864271511a417", null ],
     [ "fsDrawPixel", "group__Render.html#ga1e45557551baf71485e33e6608328c14", null ],
     [ "fsDrawQuad", "group__Render.html#ga99a8cdb154c8b8d309a1bbd1c8b209fc", null ],
+    [ "fsDrawSprite", "group__Render.html#ga066dce44e466ddde492cf0bb8c136632", null ],
     [ "fsDrawTriangle", "group__Render.html#ga65dd04ee830683c5668f165109718452", null ],
     [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ]
 ];

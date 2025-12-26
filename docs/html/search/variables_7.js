@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_0',['name',['../structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470',1,'FsWindow']]]
+  ['just_5fpressed_0',['just_pressed',['../structFsInputKeyState.html#a5425e8a99fc35d78f05e46e02d62337e',1,'FsInputKeyState']]],
+  ['just_5freleased_1',['just_released',['../structFsInputKeyState.html#a0c500df456e88e9c1085c11e58359fb2',1,'FsInputKeyState']]]
 ];

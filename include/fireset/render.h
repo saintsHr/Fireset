@@ -7,6 +7,7 @@
 #include <GL/gl.h>
 #include <stdint.h>
 #include "fireset/vertex.h"
+#include "fireset/image.h"
 
 /** 
  * @defgroup Render Render
@@ -24,7 +25,7 @@ typedef struct{
     uint8_t r; /**< Red component (0–255) */
     uint8_t g; /**< Green component (0–255) */
     uint8_t b; /**< Blue component (0–255) */
-} FsColor;
+}FsColor;
 
 /**
  * @brief Quadrilateral primitive.
@@ -36,7 +37,7 @@ typedef struct{
     FsVec2 size;     /**< Size in window space */
     FsColor color;   /**< Color */
     float angle;     /**< Rotation angle */
-} FsQuad;
+}FsQuad;
 
 /**
  * @brief Triangle primitive.
@@ -48,7 +49,7 @@ typedef struct{
     FsVec2 size;     /**< Size in window space */
     FsColor color;   /**< Color */
     float angle;     /**< Rotation angle */
-} FsTriangle;
+}FsTriangle;
 
 /**
  * @brief Point primitive.
@@ -58,7 +59,7 @@ typedef struct{
 typedef struct{
     FsVec2 position; /**< Position in window space */
     FsColor color;   /**< Color */
-} FsPoint;
+}FsPoint;
 
 /**
  * @brief Circle primitive.
@@ -71,20 +72,27 @@ typedef struct{
     FsColor color;   /**< Color */
     float angle;     /**< Rotation angle */
     int segments;    /**< Number of segments used to approximate the circle */
-} FsCircle;
+}FsCircle;
 
 /**
  * @brief Line primitive.
  *
  * Represents a line used for rendering and transformations.
  */
-typedef struct {
+typedef struct{
     FsVec2 position; /**< Starting position in window space */
     float length;    /**< Line length */
     float angle;     /**< Rotation angle */
     float thickness; /**< Line thickness */
     FsColor color;   /**< Color */
-} FsLine;
+}FsLine;
+
+typedef struct{
+    FsVec2 position;
+    FsVec2 size;
+    FsTexture* texture;
+    float angle;
+} FsSprite;
 
 /**
  * @brief Draws a pixel.
@@ -130,6 +138,8 @@ void fsDrawQuad(const FsQuad* quad);
  * @param circle Circle to draw.
  */
 void fsDrawCircle(const FsCircle* circle);
+
+void fsDrawSprite(const FsSprite* sprite);
 
 /**
  * @brief Sets the orthographic projection.

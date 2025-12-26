@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../structFsVec2.html#af9afe2cfd0a4eaf88f62565af112551c',1,'FsVec2']]]
+  ['texture_0',['texture',['../structFsSprite.html#a783ac4caa24d79f198bb8cea15494210',1,'FsSprite']]],
+  ['thickness_1',['thickness',['../structFsLine.html#a8d984c80df31daed72588b8d43da5b57',1,'FsLine']]]
 ];

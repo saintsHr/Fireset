@@ -1,12 +1,11 @@
-# Fireset
+# <img src="assets/logo.png" width="40"> Fireset
 
 ![Static Badge](https://img.shields.io/badge/Language%20-%20C%20-%20rgb(50%2C%2050%2C%20255))
 ![GitHub License](https://img.shields.io/github/license/saintsHr/Fireset)
 ![GitHub Downloads](https://img.shields.io/github/downloads/saintsHr/Fireset/total)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/saintsHr/Fireset/.github%2Fworkflows%2Fci.yml)
-
-
-![placeholder](assets/logo.png)
+![GitHub Commits](https://img.shields.io/github/commit-activity/t/saintsHr/Fireset/main)
+![GitHub Stars](https://img.shields.io/github/stars/saintsHr/Fireset?style=flat&label=%E2%AD%90%EF%B8%8F&color=%23f0c013)
 
 ---
 
